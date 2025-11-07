@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Livraisons Non Assignées - Livraigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{layout :: layout}">
+        <div th:fragment="content">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1><i class="fas fa-package"></i> Livraisons Non Assignées</h1>
+                <div>
+                    <a th:href="@{/web/deliveries/create}" class="btn btn-primary me-2">
+                        <i class="fas fa-plus"></i> Nouvelle Livraison
+                    </a>
+                    <a th:href="@{/web/deliveries}" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left"></i> Toutes les livraisons
+                    </a>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i> 
+                Ces livraisons ne sont pas encore assignées à une tournée. Vous pouvez les inclure dans une nouvelle tournée.
+            </div>
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Livraisons disponibles pour assignation</h5>
+                    <span class="badge bg-warning" th:text="${deliveries.size()} + ' livraisons non assignées'"></span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-warning">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Adresse</th>
+                                    <th>Poids (kg)</th>
+                                    <th>Volume (m³)</th>
+                                    <th>Créneau horaire</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="delivery : ${deliveries}">
+                                    <td th:text="${delivery.id}"></td>
+                                    <td th:text="${delivery.address}"></td>
+                                    <td th:text="${delivery.weight}"></td>
+                                    <td th:text="${delivery.volume}"></td>
+                                    <td>
+                                        <span th:if="${delivery.preferredTimeStart}" 
+                                              th:text="${#temporals.format(delivery.preferredTimeStart, 'HH:mm') + ' - ' + #temporals.format(delivery.preferredTimeEnd, 'HH:mm')}">
+                                        </span>
+                                        <span th:unless="${delivery.preferredTimeStart}" class="text-muted">Non spécifié</span>
+                                    </td>
+                                    <td>
+                                        <span th:class="${'badge ' + 
+                                            (delivery.status == 'PENDING' ? 'bg-warning' : 
+                                             delivery.status == 'IN_TRANSIT' ? 'bg-info' :
+                                             delivery.status == 'DELIVERED' ? 'bg-success' : 'bg-danger')}"
+                                            th:text="${delivery.status}">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <a th:href="@{/web/deliveries/edit/{id}(id=${delivery.id})}" 
+                                               class="btn btn-outline-primary">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a th:href="@{/web/tours/create}" class="btn btn-outline-success">
+                                                <i class="fas fa-route"></i> Créer tournée
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr th:if="${deliveries.empty}">
+                                    <td colspan="7" class="text-center text-muted py-4">
+                                        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                                        <p>Toutes les livraisons sont assignées !</p>
+                                        <a th:href="@{/web/deliveries/create}" class="btn btn-primary">
+                                            Créer une nouvelle livraison
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-lightbulb"></i> Suggestions</h5>
+                        <p class="card-text">
+                            Vous avez <strong th:text="${deliveries.size()}">0</strong> livraisons non assignées. 
+                            <span th:if="${deliveries.size() > 0}">
+                                Créez une nouvelle tournée pour les optimiser et réduire les coûts de livraison.
+                            </span>
+                        </p>
+                        <a th:href="@{/web/tours/create}" class="btn btn-warning">
+                            <i class="fas fa-magic"></i> Créer une tournée optimisée
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

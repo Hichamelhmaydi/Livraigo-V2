@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouveau Véhicule - Livraigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{layout :: layout}">
+        <div th:fragment="content">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1><i class="fas fa-truck"></i> Nouveau Véhicule</h1>
+                <a th:href="@{/web/vehicles}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0"><i class="fas fa-plus-circle"></i> Ajouter un nouveau véhicule à la flotte</h5>
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/web/vehicles/create}" th:object="${vehicle}" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="licensePlate" class="form-label">Plaque d'immatriculation *</label>
+                                    <input type="text" class="form-control" id="licensePlate" th:field="*{licensePlate}" required>
+                                    <div class="form-text">Numéro d'immatriculation du véhicule</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="type" class="form-label">Type de véhicule *</label>
+                                    <select class="form-select" id="type" th:field="*{type}" required onchange="updateVehicleConstraints()">
+                                        <option value="">Sélectionnez un type</option>
+                                        <option th:each="type : ${types}" 
+                                                th:value="${type}" 
+                                                th:text="${type}">
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contraintes automatiques -->
+                        <div class="alert alert-info" id="vehicleConstraints">
+                            <i class="fas fa-info-circle"></i> 
+                            Les contraintes de capacité seront automatiquement définies selon le type de véhicule sélectionné.
+                        </div>
+
+                        <div class="row" id="constraintsDetails" style="display: none;">
+                            <div class="col-md-4">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                        <h6>Poids maximum</h6>
+                                        <h4 id="maxWeight">-</h4>
+                                        <small>kilogrammes</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                        <h6>Volume maximum</h6>
+                                        <h4 id="maxVolume">-</h4>
+                                        <small>mètres cubes</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                        <h6>Livraisons maximum</h6>
+                                        <h4 id="maxDeliveries">-</h4>
+                                        <small>livraisons</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="available" th:field="*{available}" checked>
+                            <label class="form-check-label" for="available">Véhicule disponible</label>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="reset" class="btn btn-outline-secondary me-md-2">
+                                <i class="fas fa-undo"></i> Réinitialiser
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Ajouter le véhicule
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Informations sur les types -->
+            <div class="mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="card-title mb-0"><i class="fas fa-info-circle"></i> Types de véhicules disponibles</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Vélo cargo</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-weight"></i> 50kg max</li>
+                                            <li><i class="fas fa-arrows-alt-v"></i> 0.5m³ max</li>
+                                            <li><i class="fas fa-box"></i> 15 livraisons max</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Camionnette</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-weight"></i> 1000kg max</li>
+                                            <li><i class="fas fa-arrows-alt-v"></i> 8m³ max</li>
+                                            <li><i class="fas fa-box"></i> 50 livraisons max</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Camion</h6>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-weight"></i> 5000kg max</li>
+                                            <li><i class="fas fa-arrows-alt-v"></i> 40m³ max</li>
+                                            <li><i class="fas fa-box"></i> 100 livraisons max</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateVehicleConstraints() {
+            const type = document.getElementById('type').value;
+            const constraintsDiv = document.getElementById('constraintsDetails');
+            const maxWeight = document.getElementById('maxWeight');
+            const maxVolume = document.getElementById('maxVolume');
+            const maxDeliveries = document.getElementById('maxDeliveries');
+
+            if (type) {
+                constraintsDiv.style.display = 'block';
+                
+                switch(type) {
+                    case 'BIKE':
+                        maxWeight.textContent = '50 kg';
+                        maxVolume.textContent = '0.5 m³';
+                        maxDeliveries.textContent = '15';
+                        break;
+                    case 'VAN':
+                        maxWeight.textContent = '1000 kg';
+                        maxVolume.textContent = '8 m³';
+                        maxDeliveries.textContent = '50';
+                        break;
+                    case 'TRUCK':
+                        maxWeight.textContent = '5000 kg';
+                        maxVolume.textContent = '40 m³';
+                        maxDeliveries.textContent = '100';
+                        break;
+                }
+            } else {
+                constraintsDiv.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvel Entrepôt - Livraigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{layout :: layout}">
+        <div th:fragment="content">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1><i class="fas fa-warehouse"></i> Nouvel Entrepôt</h1>
+                <a th:href="@{/web/warehouses}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0"><i class="fas fa-plus-circle"></i> Créer un nouvel entrepôt</h5>
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/web/warehouses/create}" th:object="${warehouse}" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nom de l'entrepôt *</label>
+                                    <input type="text" class="form-control" id="name" th:field="*{name}" required>
+                                    <div class="form-text">Nom unique pour identifier l'entrepôt</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Adresse *</label>
+                                    <input type="text" class="form-control" id="address" th:field="*{address}" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="latitude" class="form-label">Latitude *</label>
+                                    <input type="number" step="any" class="form-control" id="latitude" th:field="*{latitude}" required>
+                                    <div class="form-text">Coordonnée GPS de l'entrepôt</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="longitude" class="form-label">Longitude *</label>
+                                    <input type="number" step="any" class="form-control" id="longitude" th:field="*{longitude}" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="openingTime" class="form-label">Heure d'ouverture *</label>
+                                    <input type="time" class="form-control" id="openingTime" th:field="*{openingTime}" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="closingTime" class="form-label">Heure de fermeture *</label>
+                                    <input type="time" class="form-control" id="closingTime" th:field="*{closingTime}" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i> 
+                            Les entrepôts servent de point de départ et d'arrivée pour toutes les tournées.
+                            Les horaires définissent les plages de disponibilité pour le départ des livraisons.
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="reset" class="btn btn-outline-secondary me-md-2">
+                                <i class="fas fa-undo"></i> Réinitialiser
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Créer l'entrepôt
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

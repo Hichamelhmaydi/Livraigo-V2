@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrepôts - Livraigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{layout :: layout}">
+        <div th:fragment="content">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1><i class="fas fa-warehouse"></i> Gestion des Entrepôts</h1>
+                <a th:href="@{/web/warehouses/create}" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Nouvel Entrepôt
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Points de départ des tournées</h5>
+                    <span class="badge bg-primary" th:text="${warehouses.size()} + ' entrepôts'"></span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Adresse</th>
+                                    <th>Coordonnées</th>
+                                    <th>Horaires</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="warehouse : ${warehouses}">
+                                    <td th:text="${warehouse.id}"></td>
+                                    <td>
+                                        <strong th:text="${warehouse.name}"></strong>
+                                    </td>
+                                    <td th:text="${warehouse.address}"></td>
+                                    <td>
+                                        <small class="text-muted" th:text="${warehouse.latitude + ', ' + warehouse.longitude}"></small>
+                                    </td>
+                                    <td>
+                                        <small th:text="${#temporals.format(warehouse.openingTime, 'HH:mm') + ' - ' + #temporals.format(warehouse.closingTime, 'HH:mm')}"></small>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <a th:href="@{/web/warehouses/edit/{id}(id=${warehouse.id})}" 
+                                               class="btn btn-outline-primary">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a th:href="@{/web/warehouses/delete/{id}(id=${warehouse.id})}" 
+                                               class="btn btn-outline-danger"
+                                               onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet entrepôt ?')">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr th:if="${warehouses.empty}">
+                                    <td colspan="6" class="text-center text-muted py-4">
+                                        <i class="fas fa-warehouse fa-3x mb-3"></i>
+                                        <p>Aucun entrepôt trouvé</p>
+                                        <a th:href="@{/web/warehouses/create}" class="btn btn-primary">
+                                            Créer le premier entrepôt
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <a th:href="@{/web}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Véhicules Disponibles - Livraigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div th:replace="~{layout :: layout}">
+        <div th:fragment="content">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <h1><i class="fas fa-truck"></i> Véhicules Disponibles</h1>
+                <a th:href="@{/web/vehicles}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left"></i> Tous les véhicules
+                </a>
+            </div>
+
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i> 
+                Ces véhicules sont actuellement disponibles pour de nouvelles tournées.
+            </div>
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Véhicules prêts à l'emploi</h5>
+                    <span class="badge bg-success" th:text="${vehicles.size()} + ' véhicules disponibles'"></span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-success">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Plaque</th>
+                                    <th>Type</th>
+                                    <th>Capacité max</th>
+                                    <th>Livraisons max</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="vehicle : ${vehicles}">
+                                    <td th:text="${vehicle.id}"></td>
+                                    <td>
+                                        <strong th:text="${vehicle.licensePlate}"></strong>
+                                    </td>
+                                    <td>
+                                        <span th:class="${'badge ' + 
+                                            (vehicle.type == 'BIKE' ? 'bg-secondary' : 
+                                             vehicle.type == 'VAN' ? 'bg-info' : 'bg-primary')}"
+                                            th:text="${vehicle.type}">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <small th:text="${vehicle.maxWeight + ' kg / ' + vehicle.maxVolume + ' m³'}"></small>
+                                    </td>
+                                    <td th:text="${vehicle.maxDeliveries}"></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <a th:href="@{/web/vehicles/edit/{id}(id=${vehicle.id})}" 
+                                               class="btn btn-outline-primary">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a th:href="@{/web/tours/create}" class="btn btn-outline-success">
+                                                <i class="fas fa-route"></i> Créer tournée
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr th:if="${vehicles.empty}">
+                                    <td colspan="6" class="text-center text-muted py-4">
+                                        <i class="fas fa-truck-loading fa-3x mb-3"></i>
+                                        <p>Aucun véhicule disponible actuellement</p>
+                                        <a th:href="@{/web/vehicles/create}" class="btn btn-primary">
+                                            Ajouter un véhicule
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggestions -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title"><i class="fas fa-lightbulb"></i> Recommandations</h6>
+                            <p class="card-text">
+                                Vous avez <strong th:text="${vehicles.size()}">0</strong> véhicules disponibles.
+                                <span th:if="${vehicles.size() > 0}">
+                                    Créez de nouvelles tournées pour optimiser leur utilisation.
+                                </span>
+                            </p>
+                            <a th:href="@{/web/tours/create}" class="btn btn-warning">
+                                <i class="fas fa-magic"></i> Créer une tournée optimisée
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title"><i class="fas fa-chart-pie"></i> Répartition par type</h6>
+                            <div class="d-flex justify-content-between">
+                                <span class="badge bg-secondary" 
+                                      th:text="${#lists.size(#lists.select(vehicles, #this.type == T(com.livraigo.model.entity.enums.VehicleType).BIKE))} + ' vélos'">
+                                </span>
+                                <span class="badge bg-info" 
+                                      th:text="${#lists.size(#lists.select(vehicles, #this.type == T(com.livraigo.model.entity.enums.VehicleType).VAN))} + ' camionnettes'">
+                                </span>
+                                <span class="badge bg-primary" 
+                                      th:text="${#lists.size(#lists.select(vehicles, #this.type == T(com.livraigo.model.entity.enums.VehicleType).TRUCK))} + ' camions'">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
