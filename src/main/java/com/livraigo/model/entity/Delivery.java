@@ -44,6 +44,10 @@ public class Delivery {
     @JoinColumn(name = "tour_id")
     private Tour tour;
     
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
+    
     @Column(name = "delivery_order")
     private Integer order;
     
@@ -126,6 +130,14 @@ public class Delivery {
     
     public void setTour(Tour tour) {
         this.tour = tour;
+    }
+    
+    public Customer getCustomer() {
+        return customer;
+    }
+    
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
     
     public Integer getOrder() {
