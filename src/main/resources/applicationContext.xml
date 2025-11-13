@@ -1,27 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:jpa="http://www.springframework.org/schema/data/jpa"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-    <!-- ============================================================= -->
-    <!-- =============== CONFIGURATION DES REPOSITORIES =============== -->
-    <!-- ============================================================= -->
+
     <jpa:repositories base-package="com.livraigo.repository"
         entity-manager-factory-ref="entityManagerFactory"
         transaction-manager-ref="transactionManager" />
 
-    <!-- ============================================================= -->
-    <!-- ====================== UTIL BEANS ============================ -->
-    <!-- ============================================================= -->
+    
     <bean id="distanceCalculator" class="com.livraigo.service.util.DistanceCalculator" />
     <bean id="tourValidator" class="com.livraigo.service.util.TourValidator" />
     <bean id="dateTimeUtil" class="com.livraigo.service.util.DateTimeUtil" />
 
-    <!-- ============================================================= -->
-    <!-- ==================== OPTIMIZER BEANS ========================= -->
-    <!-- ============================================================= -->
+
     <bean id="nearestNeighborOptimizer"
         class="com.livraigo.service.optimizer.NearestNeighborOptimizer">
         <constructor-arg ref="distanceCalculator" />
@@ -31,9 +25,6 @@
         <constructor-arg ref="distanceCalculator" />
     </bean>
 
-    <!-- ============================================================= -->
-    <!-- ====================== MAPPER BEANS ========================== -->
-    <!-- ============================================================= -->
     <bean id="modelMapper" class="org.modelmapper.ModelMapper" />
 
     <bean id="tourMapper" class="com.livraigo.mapper.TourMapper">
@@ -53,9 +44,7 @@
     </bean>
 
 
-    <!-- ============================================================= -->
-    <!-- ===================== SERVICE BEANS ========================== -->
-    <!-- ============================================================= -->
+
     <bean id="deliveryService" class="com.livraigo.service.impl.DeliveryServiceImpl">
         <constructor-arg ref="deliveryRepository" />
         <constructor-arg ref="deliveryMapper" />
@@ -82,9 +71,7 @@
         <constructor-arg ref="tourMapper" />
     </bean>
 
-    <!-- ============================================================= -->
-    <!-- ================== REST CONTROLLER BEANS ===================== -->
-    <!-- ============================================================= -->
+
     <bean id="deliveryController" class="com.livraigo.controller.DeliveryController">
         <constructor-arg ref="deliveryService" />
     </bean>
@@ -99,4 +86,4 @@
     </bean>
 
 
-</beans>
+</beans> -->
