@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    url: jdbc:postgresql://localhost:5432/livraigo
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: 123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+
+app:
+  optimization:
+    algorithm: CLARKE_WRIGHT
