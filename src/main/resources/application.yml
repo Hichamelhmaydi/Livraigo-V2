@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: livraigo
+  profiles:
+    active: dev
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+
+server:
+  port: 8080
+  servlet:
+    context-path: /livraigo
+
+logging:
+  level:
+    com.livraigo: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+
+jackson:
+  serialization:
+    fail-on-empty-beans: false
+
+app:
+  optimization:
+    algorithm: NEAREST_NEIGHBOR
+  ai:
+    provider: openai
+    api-key: ${AI_API_KEY:demo-key}
