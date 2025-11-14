@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    
+    <!-- Changeset 1: Création de la table customers -->
+    <changeSet id="v2.0-1" author="dev-team">
+        <comment>Création de la table customers pour stocker les informations clients</comment>
+        
+        <createTable tableName="customers">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="preferred_time_slot" type="VARCHAR(20)"/>
+        </createTable>
+        
+        <rollback>
+            <dropTable tableName="customers"/>
+        </rollback>
+    </changeSet>
+    
+    <!-- Changeset 2: Ajout de la colonne customer_id à deliveries -->
+    <changeSet id="v2.0-2" author="dev-team">
+        <comment>Ajout de la relation entre deliveries et customers</comment>
+        
+        <addColumn tableName="deliveries">
+            <column name="customer_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_delivery_customer" 
+                           references="customers(id)"/>
+            </column>
+        </addColumn>
+        
+        <rollback>
+            <dropColumn tableName="deliveries" columnName="customer_id"/>
+        </rollback>
+    </changeSet>
+    
+    <!-- Changeset 3: Création de la table delivery_history -->
+    <changeSet id="v2.0-3" author="dev-team">
+        <comment>Création de la table delivery_history pour le suivi des livraisons</comment>
+        
+        <createTable tableName="delivery_history">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="customer_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_history_customer" 
+                           references="customers(id)"/>
+            </column>
+            <column name="tour_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_history_tour" 
+                           references="tours(id)"/>
+            </column>
+            <column name="delivery_date" type="DATE"/>
+            <column name="planned_time" type="TIMESTAMP"/>
+            <column name="actual_time" type="TIMESTAMP"/>
+            <column name="delay" type="INTEGER"/>
+            <column name="day_of_week" type="VARCHAR(20)"/>
+            <column name="address" type="VARCHAR(500)"/>
+            <column name="latitude" type="DOUBLE"/>
+            <column name="longitude" type="DOUBLE"/>
+            <column name="weight" type="DOUBLE"/>
+            <column name="volume" type="DOUBLE"/>
+        </createTable>
+        
+        <rollback>
+            <dropTable tableName="delivery_history"/>
+        </rollback>
+    </changeSet>
+    
+    <!-- Changeset 4: Index pour optimiser les recherches -->
+    <changeSet id="v2.0-4" author="dev-team">
+        <comment>Création d'index pour optimiser les performances</comment>
+        
+        <createIndex tableName="customers" indexName="idx_customer_name">
+            <column name="name"/>
+        </createIndex>
+        
+        <createIndex tableName="delivery_history" indexName="idx_history_date">
+            <column name="delivery_date"/>
+        </createIndex>
+        
+        <createIndex tableName="delivery_history" indexName="idx_history_customer">
+            <column name="customer_id"/>
+        </createIndex>
+        
+        <rollback>
+            <dropIndex tableName="customers" indexName="idx_customer_name"/>
+            <dropIndex tableName="delivery_history" indexName="idx_history_date"/>
+            <dropIndex tableName="delivery_history" indexName="idx_history_customer"/>
+        </rollback>
+    </changeSet>
+    
+    <!-- Changeset 5: Données de test -->
+    <changeSet id="v2.0-5" author="dev-team">
+        <comment>Insertion de données de test pour customers</comment>
+        
+        <insert tableName="customers">
+            <column name="name" value="Client Paris Centre"/>
+            <column name="address" value="10 Rue de Rivoli, 75001 Paris"/>
+            <column name="latitude" value="48.8566"/>
+            <column name="longitude" value="2.3522"/>
+            <column name="preferred_time_slot" value="09:00-11:00"/>
+        </insert>
+        
+        <insert tableName="customers">
+            <column name="name" value="Client La Défense"/>
+            <column name="address" value="15 Place de la Défense, 92400 Courbevoie"/>
+            <column name="latitude" value="48.8910"/>
+            <column name="longitude" value="2.2386"/>
+            <column name="preferred_time_slot" value="14:00-16:00"/>
+        </insert>
+        
+        <rollback>
+            <delete tableName="customers">
+                <where>name IN ('Client Paris Centre', 'Client La Défense')</where>
+            </delete>
+        </rollback>
+    </changeSet>
+    
+</databaseChangeLog>
