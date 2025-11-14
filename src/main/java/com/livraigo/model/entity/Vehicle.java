@@ -2,7 +2,7 @@ package com.livraigo.model.entity;
 
 import com.livraigo.model.entity.enums.VehicleType;
 import lombok.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "vehicles")

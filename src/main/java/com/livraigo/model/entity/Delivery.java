@@ -2,7 +2,7 @@ package com.livraigo.model.entity;
 
 import com.livraigo.model.entity.enums.DeliveryStatus;
 import lombok.*;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalTime;
 
 @Entity

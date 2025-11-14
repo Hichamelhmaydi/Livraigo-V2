@@ -2,8 +2,8 @@ package com.livraigo.model.entity;
 
 import com.livraigo.model.entity.enums.OptimizationAlgorithm;
 import lombok.*;
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
