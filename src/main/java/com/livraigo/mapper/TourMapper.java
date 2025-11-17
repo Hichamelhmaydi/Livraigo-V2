@@ -1,15 +1,23 @@
 package com.livraigo.mapper;
 
-import com.livraigo.dto.TourRequestDTO;
-import com.livraigo.model.entity.*;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeMap;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeMap;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.livraigo.dto.TourRequestDTO;
+import com.livraigo.model.entity.Delivery;
+import com.livraigo.model.entity.Tour;
+import com.livraigo.model.entity.Vehicle;
+import com.livraigo.model.entity.Warehouse;
+
+@Component
 public class TourMapper {
 
+    @Autowired
     private final ModelMapper modelMapper;
 
     public TourMapper(ModelMapper modelMapper) {

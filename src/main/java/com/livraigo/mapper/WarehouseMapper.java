@@ -1,10 +1,13 @@
 package com.livraigo.mapper;
 
-import com.livraigo.model.entity.Warehouse;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import com.livraigo.model.entity.Warehouse;
+@Component
 public class WarehouseMapper {
-    
+    @Autowired
     private final ModelMapper modelMapper;
 
     public WarehouseMapper(ModelMapper modelMapper) {

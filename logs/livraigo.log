@@ -9250,3 +9250,736 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
 	... 111 common frames omitted
 
+2025-11-17T16:50:34.888+01:00  INFO 14024 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Starting LivraigoApplicationTests using Java 17.0.17 with PID 14024 (started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-17T16:50:34.890+01:00 DEBUG 14024 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-17T16:50:34.891+01:00  INFO 14024 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : The following 1 profile is active: "test"
+2025-11-17T16:50:36.843+01:00  INFO 14024 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T16:50:37.294+01:00  INFO 14024 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 424 ms. Found 6 JPA repository interfaces.
+2025-11-17T16:50:38.309+01:00  INFO 14024 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T16:50:38.660+01:00  INFO 14024 --- [livraigo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:eb4a5f17-1fe8-4959-8667-fdd343156201 user=SA
+2025-11-17T16:50:38.664+01:00  INFO 14024 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T16:50:38.818+01:00  INFO 14024 --- [livraigo] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-17T16:50:39.531+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-17T16:50:39.686+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T16:50:39.823+01:00  INFO 14024 --- [livraigo] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-17T16:50:39.825+01:00  INFO 14024 --- [livraigo] [main] liquibase.command                        : Using deploymentId: 3394639825
+2025-11-17T16:50:39.827+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T16:50:39.912+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-17T16:50:39.946+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Table vehicles created
+2025-11-17T16:50:39.948+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 33ms
+2025-11-17T16:50:39.965+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-17T16:50:39.988+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Table warehouses created
+2025-11-17T16:50:39.988+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 22ms
+2025-11-17T16:50:39.993+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-17T16:50:40.017+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Table tours created
+2025-11-17T16:50:40.019+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 24ms
+2025-11-17T16:50:40.032+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-17T16:50:40.041+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Table deliveries created
+2025-11-17T16:50:40.041+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 8ms
+2025-11-17T16:50:40.047+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-17T16:50:40.050+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : New row inserted into warehouses
+2025-11-17T16:50:40.055+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T16:50:40.057+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T16:50:40.058+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 10ms
+2025-11-17T16:50:40.063+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-17T16:50:40.066+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Table customers created
+2025-11-17T16:50:40.067+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 4ms
+2025-11-17T16:50:40.071+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-17T16:50:40.092+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-17T16:50:40.093+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 22ms
+2025-11-17T16:50:40.097+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-17T16:50:40.111+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Table delivery_history created
+2025-11-17T16:50:40.115+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 17ms
+2025-11-17T16:50:40.119+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-17T16:50:40.130+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Index idx_customer_name created
+2025-11-17T16:50:40.132+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_date created
+2025-11-17T16:50:40.134+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_customer created
+2025-11-17T16:50:40.134+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 14ms
+2025-11-17T16:50:40.145+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-17T16:50:40.149+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T16:50:40.151+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T16:50:40.152+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 5ms
+2025-11-17T16:50:40.157+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-17T16:50:40.170+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-17T16:50:40.171+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 12ms
+2025-11-17T16:50:40.174+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-17T16:50:40.185+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-17T16:50:40.186+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 12ms
+2025-11-17T16:50:40.192+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-17T16:50:40.200+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-17T16:50:40.200+01:00  INFO 14024 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 8ms
+2025-11-17T16:50:40.222+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : UPDATE SUMMARY
+2025-11-17T16:50:40.222+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : Run:                         13
+2025-11-17T16:50:40.222+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : Previously run:               0
+2025-11-17T16:50:40.222+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : Filtered out:                 0
+2025-11-17T16:50:40.222+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : -------------------------------
+2025-11-17T16:50:40.222+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : Total change sets:           13
+2025-11-17T16:50:40.224+01:00  INFO 14024 --- [livraigo] [main] liquibase.util                           : Update summary generated
+2025-11-17T16:50:40.233+01:00  INFO 14024 --- [livraigo] [main] liquibase.command                        : Update command completed successfully.
+2025-11-17T16:50:40.235+01:00  INFO 14024 --- [livraigo] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-17T16:50:40.237+01:00  INFO 14024 --- [livraigo] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-11-17T16:50:40.238+01:00  INFO 14024 --- [livraigo] [main] liquibase.command                        : Command execution complete
+2025-11-17T16:50:40.517+01:00  INFO 14024 --- [livraigo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T16:50:40.756+01:00  INFO 14024 --- [livraigo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-17T16:50:40.908+01:00  INFO 14024 --- [livraigo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T16:50:41.657+01:00  INFO 14024 --- [livraigo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T16:50:41.834+01:00  WARN 14024 --- [livraigo] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T16:50:43.458+01:00  INFO 14024 --- [livraigo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T16:50:43.495+01:00  INFO 14024 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:50:43.973+01:00  INFO 14024 --- [livraigo] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-17T16:50:45.930+01:00  WARN 14024 --- [livraigo] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vehicleController' defined in file [C:\Users\youco\Desktop\livraigo-V2\target\classes\com\livraigo\controller\VehicleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'vehicleServiceImpl' defined in file [C:\Users\youco\Desktop\livraigo-V2\target\classes\com\livraigo\service\impl\VehicleServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.livraigo.mapper.VehicleMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-11-17T16:50:45.931+01:00  INFO 14024 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:50:45.933+01:00  INFO 14024 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T16:50:45.936+01:00  INFO 14024 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T16:50:45.947+01:00  INFO 14024 --- [livraigo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-17T16:50:46.010+01:00 ERROR 14024 --- [livraigo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.livraigo.service.impl.VehicleServiceImpl required a bean of type 'com.livraigo.mapper.VehicleMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.livraigo.mapper.VehicleMapper' in your configuration.
+
+2025-11-17T16:50:46.016+01:00  WARN 14024 --- [livraigo] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.livraigo.LivraigoApplicationTests@3cbe4472]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@d86a616 testClass = com.livraigo.LivraigoApplicationTests, locations = [], classes = [com.livraigo.LivraigoApplication], contextInitializerClasses = [], activeProfiles = ["test"], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13526e59, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@36804139, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32115b28, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@16612a51, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@70e38ce1, org.springframework.boot.test.context.SpringBootTestAnnotation@41177167], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vehicleController' defined in file [C:\Users\youco\Desktop\livraigo-V2\target\classes\com\livraigo\controller\VehicleController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'vehicleServiceImpl' defined in file [C:\Users\youco\Desktop\livraigo-V2\target\classes\com\livraigo\service\impl\VehicleServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.livraigo.mapper.VehicleMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'vehicleServiceImpl' defined in file [C:\Users\youco\Desktop\livraigo-V2\target\classes\com\livraigo\service\impl\VehicleServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.livraigo.mapper.VehicleMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 97 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.livraigo.mapper.VehicleMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 111 common frames omitted
+
+2025-11-17T16:52:35.775+01:00  INFO 1176 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Starting LivraigoApplicationTests using Java 17.0.17 with PID 1176 (started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-17T16:52:35.777+01:00 DEBUG 1176 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-17T16:52:35.779+01:00  INFO 1176 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : The following 1 profile is active: "test"
+2025-11-17T16:52:37.414+01:00  INFO 1176 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T16:52:37.713+01:00  INFO 1176 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 282 ms. Found 6 JPA repository interfaces.
+2025-11-17T16:52:38.605+01:00  INFO 1176 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T16:52:38.926+01:00  INFO 1176 --- [livraigo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:c5b04e78-b52a-4589-b12c-6ddd1758299a user=SA
+2025-11-17T16:52:38.928+01:00  INFO 1176 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T16:52:39.110+01:00  INFO 1176 --- [livraigo] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-17T16:52:39.787+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-17T16:52:39.942+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T16:52:40.081+01:00  INFO 1176 --- [livraigo] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-17T16:52:40.084+01:00  INFO 1176 --- [livraigo] [main] liquibase.command                        : Using deploymentId: 3394760083
+2025-11-17T16:52:40.087+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T16:52:40.148+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-17T16:52:40.192+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Table vehicles created
+2025-11-17T16:52:40.195+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 44ms
+2025-11-17T16:52:40.205+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-17T16:52:40.209+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Table warehouses created
+2025-11-17T16:52:40.210+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 4ms
+2025-11-17T16:52:40.213+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-17T16:52:40.227+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Table tours created
+2025-11-17T16:52:40.228+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 14ms
+2025-11-17T16:52:40.232+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-17T16:52:40.237+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Table deliveries created
+2025-11-17T16:52:40.237+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 5ms
+2025-11-17T16:52:40.246+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-17T16:52:40.250+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : New row inserted into warehouses
+2025-11-17T16:52:40.255+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T16:52:40.258+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T16:52:40.267+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 17ms
+2025-11-17T16:52:40.274+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-17T16:52:40.286+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Table customers created
+2025-11-17T16:52:40.286+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 11ms
+2025-11-17T16:52:40.300+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-17T16:52:40.332+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-17T16:52:40.333+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 32ms
+2025-11-17T16:52:40.339+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-17T16:52:40.353+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Table delivery_history created
+2025-11-17T16:52:40.354+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 14ms
+2025-11-17T16:52:40.358+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-17T16:52:40.365+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Index idx_customer_name created
+2025-11-17T16:52:40.373+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_date created
+2025-11-17T16:52:40.380+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_customer created
+2025-11-17T16:52:40.382+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 22ms
+2025-11-17T16:52:40.397+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-17T16:52:40.400+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T16:52:40.401+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T16:52:40.402+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 4ms
+2025-11-17T16:52:40.405+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-17T16:52:40.417+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-17T16:52:40.418+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 12ms
+2025-11-17T16:52:40.420+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-17T16:52:40.429+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-17T16:52:40.430+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 10ms
+2025-11-17T16:52:40.433+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-17T16:52:40.438+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-17T16:52:40.439+01:00  INFO 1176 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 5ms
+2025-11-17T16:52:40.454+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : UPDATE SUMMARY
+2025-11-17T16:52:40.455+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : Run:                         13
+2025-11-17T16:52:40.455+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : Previously run:               0
+2025-11-17T16:52:40.455+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : Filtered out:                 0
+2025-11-17T16:52:40.455+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : -------------------------------
+2025-11-17T16:52:40.456+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : Total change sets:           13
+2025-11-17T16:52:40.459+01:00  INFO 1176 --- [livraigo] [main] liquibase.util                           : Update summary generated
+2025-11-17T16:52:40.466+01:00  INFO 1176 --- [livraigo] [main] liquibase.command                        : Update command completed successfully.
+2025-11-17T16:52:40.467+01:00  INFO 1176 --- [livraigo] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-17T16:52:40.477+01:00  INFO 1176 --- [livraigo] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-11-17T16:52:40.479+01:00  INFO 1176 --- [livraigo] [main] liquibase.command                        : Command execution complete
+2025-11-17T16:52:40.727+01:00  INFO 1176 --- [livraigo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T16:52:41.005+01:00  INFO 1176 --- [livraigo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-17T16:52:41.145+01:00  INFO 1176 --- [livraigo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T16:52:41.921+01:00  INFO 1176 --- [livraigo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T16:52:42.105+01:00  WARN 1176 --- [livraigo] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T16:52:43.631+01:00  INFO 1176 --- [livraigo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T16:52:43.668+01:00  INFO 1176 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:52:44.257+01:00  INFO 1176 --- [livraigo] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-17T16:52:45.885+01:00  WARN 1176 --- [livraigo] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatClient' defined in class path resource [com/livraigo/config/AiConfig.class]: Unsatisfied dependency expressed through method 'chatClient' parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-11-17T16:52:45.886+01:00  INFO 1176 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:52:45.889+01:00  INFO 1176 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T16:52:45.892+01:00  INFO 1176 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T16:52:45.902+01:00  INFO 1176 --- [livraigo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-17T16:52:45.961+01:00 ERROR 1176 --- [livraigo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method chatClient in com.livraigo.config.AiConfig required a bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' in your configuration.
+
+2025-11-17T16:52:45.971+01:00  WARN 1176 --- [livraigo] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.livraigo.LivraigoApplicationTests@44c66c7b]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@746a671 testClass = com.livraigo.LivraigoApplicationTests, locations = [], classes = [com.livraigo.LivraigoApplication], contextInitializerClasses = [], activeProfiles = ["test"], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13526e59, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@36804139, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32115b28, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@16612a51, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@70e38ce1, org.springframework.boot.test.context.SpringBootTestAnnotation@41177167], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatClient' defined in class path resource [com/livraigo/config/AiConfig.class]: Unsatisfied dependency expressed through method 'chatClient' parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 97 common frames omitted
+
+2025-11-17T16:57:36.346+01:00  INFO 11368 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Starting LivraigoApplicationTests using Java 17.0.17 with PID 11368 (started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-17T16:57:36.348+01:00 DEBUG 11368 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-17T16:57:36.350+01:00  INFO 11368 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : The following 1 profile is active: "test"
+2025-11-17T16:57:37.861+01:00  INFO 11368 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T16:57:38.263+01:00  INFO 11368 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 380 ms. Found 6 JPA repository interfaces.
+2025-11-17T16:57:39.034+01:00  INFO 11368 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T16:57:39.440+01:00  INFO 11368 --- [livraigo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e49d5bdd-e68a-448f-8bf8-c4ba72d5984c user=SA
+2025-11-17T16:57:39.444+01:00  INFO 11368 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T16:57:39.593+01:00  INFO 11368 --- [livraigo] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-17T16:57:40.250+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-17T16:57:40.419+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T16:57:40.569+01:00  INFO 11368 --- [livraigo] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-17T16:57:40.572+01:00  INFO 11368 --- [livraigo] [main] liquibase.command                        : Using deploymentId: 3395060571
+2025-11-17T16:57:40.576+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T16:57:40.693+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-17T16:57:40.736+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Table vehicles created
+2025-11-17T16:57:40.737+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 41ms
+2025-11-17T16:57:40.753+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-17T16:57:40.759+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Table warehouses created
+2025-11-17T16:57:40.760+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 6ms
+2025-11-17T16:57:40.766+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-17T16:57:40.785+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Table tours created
+2025-11-17T16:57:40.785+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 19ms
+2025-11-17T16:57:40.793+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-17T16:57:40.801+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Table deliveries created
+2025-11-17T16:57:40.802+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 7ms
+2025-11-17T16:57:40.808+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-17T16:57:40.812+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : New row inserted into warehouses
+2025-11-17T16:57:40.816+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T16:57:40.819+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T16:57:40.820+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 11ms
+2025-11-17T16:57:40.826+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-17T16:57:40.836+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Table customers created
+2025-11-17T16:57:40.837+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 11ms
+2025-11-17T16:57:40.843+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-17T16:57:40.877+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-17T16:57:40.878+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 34ms
+2025-11-17T16:57:40.883+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-17T16:57:40.891+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Table delivery_history created
+2025-11-17T16:57:40.892+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 9ms
+2025-11-17T16:57:40.898+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-17T16:57:40.911+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Index idx_customer_name created
+2025-11-17T16:57:40.915+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_date created
+2025-11-17T16:57:40.919+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_customer created
+2025-11-17T16:57:40.920+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 21ms
+2025-11-17T16:57:40.933+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-17T16:57:40.953+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T16:57:40.956+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T16:57:40.958+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 17ms
+2025-11-17T16:57:40.970+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-17T16:57:40.993+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-17T16:57:40.995+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 23ms
+2025-11-17T16:57:41.000+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-17T16:57:41.021+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-17T16:57:41.023+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 22ms
+2025-11-17T16:57:41.031+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-17T16:57:41.051+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-17T16:57:41.052+01:00  INFO 11368 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 19ms
+2025-11-17T16:57:41.073+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : UPDATE SUMMARY
+2025-11-17T16:57:41.074+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : Run:                         13
+2025-11-17T16:57:41.074+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : Previously run:               0
+2025-11-17T16:57:41.074+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : Filtered out:                 0
+2025-11-17T16:57:41.074+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : -------------------------------
+2025-11-17T16:57:41.075+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : Total change sets:           13
+2025-11-17T16:57:41.077+01:00  INFO 11368 --- [livraigo] [main] liquibase.util                           : Update summary generated
+2025-11-17T16:57:41.084+01:00  INFO 11368 --- [livraigo] [main] liquibase.command                        : Update command completed successfully.
+2025-11-17T16:57:41.085+01:00  INFO 11368 --- [livraigo] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-17T16:57:41.089+01:00  INFO 11368 --- [livraigo] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-11-17T16:57:41.091+01:00  INFO 11368 --- [livraigo] [main] liquibase.command                        : Command execution complete
+2025-11-17T16:57:41.324+01:00  INFO 11368 --- [livraigo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T16:57:41.477+01:00  INFO 11368 --- [livraigo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-17T16:57:41.541+01:00  INFO 11368 --- [livraigo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T16:57:42.020+01:00  INFO 11368 --- [livraigo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T16:57:42.129+01:00  WARN 11368 --- [livraigo] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T16:57:43.404+01:00  INFO 11368 --- [livraigo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T16:57:43.449+01:00  INFO 11368 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:57:43.975+01:00  INFO 11368 --- [livraigo] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-17T16:57:45.564+01:00  WARN 11368 --- [livraigo] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatClient' defined in class path resource [com/livraigo/config/AiConfig.class]: Unsatisfied dependency expressed through method 'chatClient' parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-11-17T16:57:45.566+01:00  INFO 11368 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:57:45.568+01:00  INFO 11368 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T16:57:45.569+01:00  INFO 11368 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T16:57:45.577+01:00  INFO 11368 --- [livraigo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-17T16:57:45.616+01:00 ERROR 11368 --- [livraigo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method chatClient in com.livraigo.config.AiConfig required a bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' in your configuration.
+
+2025-11-17T16:57:45.627+01:00  WARN 11368 --- [livraigo] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.livraigo.LivraigoApplicationTests@448ec893]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@7c007713 testClass = com.livraigo.LivraigoApplicationTests, locations = [], classes = [com.livraigo.LivraigoApplication], contextInitializerClasses = [], activeProfiles = ["test"], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13526e59, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@36804139, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32115b28, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@16612a51, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@70e38ce1, org.springframework.boot.test.context.SpringBootTestAnnotation@41177167], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chatClient' defined in class path resource [com/livraigo/config/AiConfig.class]: Unsatisfied dependency expressed through method 'chatClient' parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient$Builder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 97 common frames omitted
+
+2025-11-17T17:00:08.222+01:00  INFO 17864 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Starting LivraigoApplicationTests using Java 17.0.17 with PID 17864 (started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-17T17:00:08.225+01:00 DEBUG 17864 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-17T17:00:08.226+01:00  INFO 17864 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : The following 1 profile is active: "test"
+2025-11-17T17:00:09.715+01:00  INFO 17864 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T17:00:10.017+01:00  INFO 17864 --- [livraigo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 289 ms. Found 6 JPA repository interfaces.
+2025-11-17T17:00:11.559+01:00  INFO 17864 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T17:00:11.919+01:00  INFO 17864 --- [livraigo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ae7dc83a-eda9-4407-a66f-129ae53d6253 user=SA
+2025-11-17T17:00:11.922+01:00  INFO 17864 --- [livraigo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T17:00:12.047+01:00  INFO 17864 --- [livraigo] [main] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-17T17:00:12.867+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-17T17:00:13.111+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T17:00:13.286+01:00  INFO 17864 --- [livraigo] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-17T17:00:13.289+01:00  INFO 17864 --- [livraigo] [main] liquibase.command                        : Using deploymentId: 3395213288
+2025-11-17T17:00:13.292+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-17T17:00:13.386+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-17T17:00:13.428+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Table vehicles created
+2025-11-17T17:00:13.430+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 38ms
+2025-11-17T17:00:13.447+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-17T17:00:13.454+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Table warehouses created
+2025-11-17T17:00:13.455+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 7ms
+2025-11-17T17:00:13.464+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-17T17:00:13.494+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Table tours created
+2025-11-17T17:00:13.494+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 29ms
+2025-11-17T17:00:13.501+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-17T17:00:13.513+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Table deliveries created
+2025-11-17T17:00:13.514+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 10ms
+2025-11-17T17:00:13.526+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-17T17:00:13.529+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : New row inserted into warehouses
+2025-11-17T17:00:13.533+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T17:00:13.540+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : New row inserted into vehicles
+2025-11-17T17:00:13.542+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 15ms
+2025-11-17T17:00:13.546+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-17T17:00:13.552+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Table customers created
+2025-11-17T17:00:13.553+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 7ms
+2025-11-17T17:00:13.558+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-17T17:00:13.589+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-17T17:00:13.592+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 33ms
+2025-11-17T17:00:13.608+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-17T17:00:13.617+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Table delivery_history created
+2025-11-17T17:00:13.619+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 9ms
+2025-11-17T17:00:13.624+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-17T17:00:13.631+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Index idx_customer_name created
+2025-11-17T17:00:13.634+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_date created
+2025-11-17T17:00:13.637+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Index idx_history_customer created
+2025-11-17T17:00:13.638+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 13ms
+2025-11-17T17:00:13.644+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-17T17:00:13.648+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T17:00:13.651+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : New row inserted into customers
+2025-11-17T17:00:13.652+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 7ms
+2025-11-17T17:00:13.657+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-17T17:00:13.678+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-17T17:00:13.679+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 21ms
+2025-11-17T17:00:13.685+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-17T17:00:13.710+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-17T17:00:13.711+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 24ms
+2025-11-17T17:00:13.716+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-17T17:00:13.728+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-17T17:00:13.729+01:00  INFO 17864 --- [livraigo] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 12ms
+2025-11-17T17:00:13.746+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : UPDATE SUMMARY
+2025-11-17T17:00:13.747+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : Run:                         13
+2025-11-17T17:00:13.747+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : Previously run:               0
+2025-11-17T17:00:13.747+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : Filtered out:                 0
+2025-11-17T17:00:13.747+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : -------------------------------
+2025-11-17T17:00:13.748+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : Total change sets:           13
+2025-11-17T17:00:13.750+01:00  INFO 17864 --- [livraigo] [main] liquibase.util                           : Update summary generated
+2025-11-17T17:00:13.758+01:00  INFO 17864 --- [livraigo] [main] liquibase.command                        : Update command completed successfully.
+2025-11-17T17:00:13.759+01:00  INFO 17864 --- [livraigo] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-17T17:00:13.763+01:00  INFO 17864 --- [livraigo] [main] liquibase.lockservice                    : Successfully released change log lock
+2025-11-17T17:00:13.766+01:00  INFO 17864 --- [livraigo] [main] liquibase.command                        : Command execution complete
+2025-11-17T17:00:14.097+01:00  INFO 17864 --- [livraigo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T17:00:14.297+01:00  INFO 17864 --- [livraigo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-17T17:00:14.409+01:00  INFO 17864 --- [livraigo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T17:00:15.173+01:00  INFO 17864 --- [livraigo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T17:00:15.391+01:00  WARN 17864 --- [livraigo] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T17:00:17.195+01:00  INFO 17864 --- [livraigo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T17:00:17.244+01:00  INFO 17864 --- [livraigo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T17:00:17.893+01:00  INFO 17864 --- [livraigo] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-17T17:00:20.181+01:00  WARN 17864 --- [livraigo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T17:00:20.268+01:00  INFO 17864 --- [livraigo] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-17T17:00:21.510+01:00  INFO 17864 --- [livraigo] [main] com.livraigo.LivraigoApplicationTests    : Started LivraigoApplicationTests in 13.834 seconds (process running for 15.642)
+2025-11-17T17:00:22.494+01:00  INFO 17864 --- [livraigo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T17:00:22.500+01:00  INFO 17864 --- [livraigo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T17:00:22.505+01:00  INFO 17864 --- [livraigo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
