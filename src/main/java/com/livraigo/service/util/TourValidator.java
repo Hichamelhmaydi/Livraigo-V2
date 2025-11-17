@@ -1,12 +1,14 @@
 package com.livraigo.service.util;
 
-import com.livraigo.model.entity.Delivery;
-import com.livraigo.model.entity.Vehicle;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import com.livraigo.model.entity.Delivery;
+import com.livraigo.model.entity.Vehicle;
+@Component
 public class TourValidator {
     
     private static final Logger logger = LoggerFactory.getLogger(TourValidator.class);

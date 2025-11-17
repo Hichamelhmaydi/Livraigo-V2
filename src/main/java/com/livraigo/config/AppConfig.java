@@ -10,7 +10,6 @@ import com.livraigo.repository.DeliveryHistoryRepository;
 import com.livraigo.service.optimizer.AiOptimizer;
 import com.livraigo.service.optimizer.ClarkeWrightOptimizer;
 import com.livraigo.service.optimizer.NearestNeighborOptimizer;
-import com.livraigo.service.optimizer.TourOptimizer;
 import com.livraigo.service.util.DistanceCalculator;
 
 @Configuration
@@ -22,9 +21,7 @@ public class AppConfig {
     }
 
     @Bean
-    @ConditionalOnProperty(name = "app.optimization.algorithm", havingValue = "CLARKE_WRIGHT")
-    @Primary
-    public TourOptimizer clarkeWrightOptimizer(DistanceCalculator distanceCalculator) {
+    public ClarkeWrightOptimizer clarkeWrightOptimizer(DistanceCalculator distanceCalculator) {
         return new ClarkeWrightOptimizer(distanceCalculator);
     }
 
