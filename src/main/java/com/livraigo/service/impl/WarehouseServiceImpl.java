@@ -1,16 +1,16 @@
 package com.livraigo.service.impl;
-
+import java.util.List;
+import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service;
 import com.livraigo.mapper.WarehouseMapper;
 import com.livraigo.model.entity.Warehouse;
 import com.livraigo.repository.WarehouseRepository;
 import com.livraigo.service.interfaces.WarehouseService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.dao.EmptyResultDataAccessException;
-
-import java.util.List;
-import java.util.Optional;
-
+@Service
 public class WarehouseServiceImpl implements WarehouseService {
     
     private static final Logger logger = LoggerFactory.getLogger(WarehouseServiceImpl.class);

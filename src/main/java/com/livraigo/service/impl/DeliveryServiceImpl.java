@@ -6,13 +6,14 @@ import com.livraigo.model.entity.Delivery;
 import com.livraigo.model.entity.enums.DeliveryStatus;
 import com.livraigo.repository.DeliveryRepository;
 import com.livraigo.service.interfaces.DeliveryService;
+import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.EmptyResultDataAccessException;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class DeliveryServiceImpl implements DeliveryService {
     
     private static final Logger logger = LoggerFactory.getLogger(DeliveryServiceImpl.class);

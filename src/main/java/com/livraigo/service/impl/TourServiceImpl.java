@@ -19,11 +19,12 @@ import com.livraigo.service.util.TourValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
+@Service
 public class TourServiceImpl implements TourService {
     
     private static final Logger logger = LoggerFactory.getLogger(TourServiceImpl.class);
