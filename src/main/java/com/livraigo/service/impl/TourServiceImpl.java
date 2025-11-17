@@ -141,10 +141,13 @@ public Tour save(TourRequestDTO tourDTO) {
     
     private Tour optimizeTour(Tour tour) {
         TourOptimizer optimizer = getOptimizer(tour.getAlgorithm());
+
         List<Delivery> optimizedDeliveries = optimizer.calculateOptimalTour(
-                tour.getWarehouse(), 
-                tour.getDeliveries()
+            tour.getDeliveries(),  
+            tour.getWarehouse(),    
+            null                  
         );
+
         
         for (int i = 0; i < optimizedDeliveries.size(); i++) {
             optimizedDeliveries.get(i).setOrder(i + 1);
