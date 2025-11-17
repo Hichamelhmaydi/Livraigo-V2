@@ -4,6 +4,14 @@ spring:
     name: livraigo
   profiles:
     active: dev
+
+  ai:
+    openai:
+      api-key: ${AI_API_KEY:demo-key}
+      chat:
+        options:
+          model: gpt-4o-mini
+
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -12,9 +20,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     enabled: true
+
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
@@ -23,6 +33,7 @@ spring:
     servlet:
       content-type: text/html
     cache: false
+
   mvc:
     static-path-pattern: /static/**
 
@@ -68,11 +79,13 @@ spring:
   config:
     activate:
       on-profile: dev
+
   datasource:
     url: jdbc:h2:mem:livraigodb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password:
+
   h2:
     console:
       enabled: true
@@ -91,11 +104,13 @@ spring:
   config:
     activate:
       on-profile: qa
+
   datasource:
     url: jdbc:postgresql://localhost:5432/livraigo-qa
     driver-class-name: org.postgresql.Driver
     username: qa-user
     password: qa-password
+
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -118,6 +133,7 @@ spring:
   config:
     activate:
       on-profile: prod
+
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:livraigo-prod}
     driver-class-name: org.postgresql.Driver
@@ -127,6 +143,7 @@ spring:
       maximum-pool-size: 20
       minimum-idle: 5
       connection-timeout: 30000
+
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
@@ -138,11 +155,6 @@ spring:
           batch_size: 30
         order_inserts: true
         order_updates: true
-
-server:
-  port: 8080
-  servlet:
-    context-path: /livraigo
 
 logging:
   level:

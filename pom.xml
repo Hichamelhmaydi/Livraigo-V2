@@ -94,14 +94,12 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
         </dependency>
-<!-- https://mvnrepository.com/artifact/org.springframework.ai/spring-ai-core -->
-<dependency>
-    <groupId>org.springframework.ai</groupId>
-    <artifactId>spring-ai-core</artifactId>
-    <version>1.0.0-M6</version>
-</dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/org.springframework.ai/spring-ai-core -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-core</artifactId>
+            <version>1.0.0-M6</version>
+        </dependency>
     </dependencies>
 
     <build>
