@@ -4,7 +4,8 @@ import com.livraigo.model.entity.Delivery;
 import com.livraigo.model.entity.Warehouse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.stereotype.Component;
+@Component
 public class DistanceCalculator {
     
     private static final Logger logger = LoggerFactory.getLogger(DistanceCalculator.class);

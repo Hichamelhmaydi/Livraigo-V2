@@ -17,9 +17,7 @@ import com.livraigo.service.util.DistanceCalculator;
 public class AppConfig {
 
     @Bean
-    @ConditionalOnProperty(name = "app.optimization.algorithm", havingValue = "NEAREST_NEIGHBOR")
-    @Primary
-    public TourOptimizer nearestNeighborOptimizer(DistanceCalculator distanceCalculator) {
+    public NearestNeighborOptimizer nearestNeighborOptimizer(DistanceCalculator distanceCalculator) {
         return new NearestNeighborOptimizer(distanceCalculator);
     }
 

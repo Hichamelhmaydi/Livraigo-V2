@@ -2,12 +2,14 @@ package com.livraigo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-public class LivraigoApplicationTests {
+@ActiveProfiles("test")
+class LivraigoApplicationTests {
 
     @Test
-    public void contextLoads() {
-        // Test basique pour vérifier que le contexte se charge
+    void contextLoads() {
     }
+
 }

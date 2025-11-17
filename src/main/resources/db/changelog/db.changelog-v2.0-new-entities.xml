@@ -131,5 +131,26 @@
             </delete>
         </rollback>
     </changeSet>
+        <changeSet author="dev-team" id="v2.0-6-add-algorithm-column">
+        <addColumn tableName="tours">
+            <column name="algorithm" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="dev-team" id="v2.0-7-add-name-column">
+    <addColumn tableName="tours">
+        <column name="name" type="VARCHAR(255)">
+            <constraints nullable="true"/>
+        </column>
+    </addColumn>
+</changeSet>
+<changeSet author="dev-team" id="v2.0-8-add-name-to-warehouses">
+    <addColumn tableName="warehouses">
+        <column name="name" type="VARCHAR(255)">
+            <constraints nullable="true"/>
+        </column>
+    </addColumn>
+</changeSet>
     
 </databaseChangeLog>

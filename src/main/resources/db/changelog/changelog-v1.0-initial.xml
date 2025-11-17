@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <!-- Changeset 1: Création de la table vehicles -->
+    <changeSet id="v1.0-1" author="dev-team">
+        <comment>Création de la table vehicles</comment>
+        
+        <createTable tableName="vehicles">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="license_plate" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="type" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_weight" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_volume" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_deliveries" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="available" type="BOOLEAN" defaultValue="true"/>
+        </createTable>
+        
+        <rollback>
+            <dropTable tableName="vehicles"/>
+        </rollback>
+    </changeSet>
+
+    <!-- Changeset 2: Création de la table warehouses -->
+    <changeSet id="v1.0-2" author="dev-team">
+        <comment>Création de la table warehouses</comment>
+        
+        <createTable tableName="warehouses">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="opening_time" type="TIME" defaultValue="06:00:00"/>
+            <column name="closing_time" type="TIME" defaultValue="22:00:00"/>
+        </createTable>
+        
+        <rollback>
+            <dropTable tableName="warehouses"/>
+        </rollback>
+    </changeSet>
+
+    <!-- Changeset 3: Création de la table tours -->
+    <changeSet id="v1.0-3" author="dev-team">
+        <comment>Création de la table tours</comment>
+        
+        <createTable tableName="tours">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="date" type="DATE"/>
+            <column name="vehicle_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_tour_vehicle" references="vehicles(id)"/>
+            </column>
+            <column name="warehouse_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_tour_warehouse" references="warehouses(id)"/>
+            </column>
+            <column name="total_distance" type="DOUBLE" defaultValue="0.0"/>
+            <column name="status" type="VARCHAR(50)" defaultValue="PLANNED"/>
+        </createTable>
+        
+        <rollback>
+            <dropTable tableName="tours"/>
+        </rollback>
+    </changeSet>
+
+    <!-- Changeset 4: Création de la table deliveries -->
+    <changeSet id="v1.0-4" author="dev-team">
+        <comment>Création de la table deliveries</comment>
+        
+        <createTable tableName="deliveries">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="volume" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="preferred_time_start" type="TIME"/>
+            <column name="preferred_time_end" type="TIME"/>
+            <column name="status" type="VARCHAR(50)" defaultValue="PENDING"/>
+            <column name="tour_id" type="BIGINT">
+                <constraints foreignKeyName="fk_delivery_tour" references="tours(id)"/>
+            </column>
+            <column name="delivery_order" type="INT"/>
+        </createTable>
+        
+        <rollback>
+            <dropTable tableName="deliveries"/>
+        </rollback>
+    </changeSet>
+
+    <!-- Changeset 5: Insertion de données de test -->
+    <changeSet id="v1.0-5" author="dev-team">
+        <comment>Insertion de données de test</comment>
+        
+        <!-- Données pour warehouse -->
+        <insert tableName="warehouses">
+            <column name="address" value="123 Main Warehouse, Paris"/>
+            <column name="latitude" value="48.8566"/>
+            <column name="longitude" value="2.3522"/>
+        </insert>
+        
+        <!-- Données pour vehicles -->
+        <insert tableName="vehicles">
+            <column name="license_plate" value="AB-123-CD"/>
+            <column name="type" value="VAN"/>
+            <column name="max_weight" value="1000.0"/>
+            <column name="max_volume" value="8.0"/>
+            <column name="max_deliveries" value="50"/>
+            <column name="available" value="true"/>
+        </insert>
+        
+        <insert tableName="vehicles">
+            <column name="license_plate" value="EF-456-GH"/>
+            <column name="type" value="BIKE"/>
+            <column name="max_weight" value="50.0"/>
+            <column name="max_volume" value="0.5"/>
+            <column name="max_deliveries" value="15"/>
+            <column name="available" value="true"/>
+        </insert>
+        
+        <rollback>
+            <delete tableName="warehouses"/>
+            <delete tableName="vehicles"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
