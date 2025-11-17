@@ -1,7 +1,9 @@
 package com.livraigo.service.optimizer;
 
 import com.livraigo.model.entity.Delivery;
+import com.livraigo.model.entity.Vehicle;
 import com.livraigo.model.entity.Warehouse;
+import com.livraigo.model.entity.enums.OptimizationAlgorithm;
 import com.livraigo.service.util.DistanceCalculator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +22,7 @@ public class NearestNeighborOptimizer implements TourOptimizer {
     }
     
     @Override
-    public List<Delivery> calculateOptimalTour(Warehouse warehouse, List<Delivery> deliveries) {
+    public List<Delivery> calculateOptimalTour(List<Delivery> deliveries, Warehouse warehouse, Vehicle vehicle) {
         logger.info("Calculating optimal tour using Nearest Neighbor algorithm");
         
         if (deliveries.isEmpty()) {
@@ -74,4 +76,9 @@ public class NearestNeighborOptimizer implements TourOptimizer {
         
         return nearest;
     }
+    @Override
+    public OptimizationAlgorithm getAlgorithm() {
+        return OptimizationAlgorithm.NEAREST_NEIGHBOR;
+    }
+
 }
