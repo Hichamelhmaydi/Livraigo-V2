@@ -11187,3 +11187,373 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
+2025-11-20T02:50:07.892+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:50:07.895+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:50:07.896+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
+2025-11-20T02:50:07.948+01:00  INFO 8048 --- [livraigo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-20T02:50:07.949+01:00  INFO 8048 --- [livraigo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-20T02:50:08.709+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T02:50:08.957+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 240 ms. Found 6 JPA repository interfaces.
+2025-11-20T02:50:09.633+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T02:50:09.662+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T02:50:09.662+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-20T02:50:09.761+01:00  INFO 8048 --- [livraigo] [restartedMain] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring embedded WebApplicationContext
+2025-11-20T02:50:09.763+01:00  INFO 8048 --- [livraigo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1813 ms
+2025-11-20T02:50:09.826+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-20T02:50:10.080+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:livraigodb user=SA
+2025-11-20T02:50:10.082+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-20T02:50:10.094+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:livraigodb'
+2025-11-20T02:50:10.308+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-20T02:50:10.841+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-20T02:50:10.978+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:50:11.101+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-20T02:50:11.103+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Using deploymentId: 3603411102
+2025-11-20T02:50:11.105+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:50:11.162+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-20T02:50:11.177+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table vehicles created
+2025-11-20T02:50:11.178+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 15ms
+2025-11-20T02:50:11.186+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-20T02:50:11.193+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table warehouses created
+2025-11-20T02:50:11.193+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 6ms
+2025-11-20T02:50:11.195+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-20T02:50:11.210+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table tours created
+2025-11-20T02:50:11.211+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 15ms
+2025-11-20T02:50:11.215+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-20T02:50:11.222+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table deliveries created
+2025-11-20T02:50:11.223+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 7ms
+2025-11-20T02:50:11.234+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-20T02:50:11.236+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into warehouses
+2025-11-20T02:50:11.239+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:50:11.244+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:50:11.247+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 13ms
+2025-11-20T02:50:11.251+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-20T02:50:11.254+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table customers created
+2025-11-20T02:50:11.254+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 3ms
+2025-11-20T02:50:11.263+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-20T02:50:11.291+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-20T02:50:11.293+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 27ms
+2025-11-20T02:50:11.295+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-20T02:50:11.304+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table delivery_history created
+2025-11-20T02:50:11.304+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 8ms
+2025-11-20T02:50:11.306+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-20T02:50:11.310+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_customer_name created
+2025-11-20T02:50:11.311+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_date created
+2025-11-20T02:50:11.313+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_customer created
+2025-11-20T02:50:11.316+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 9ms
+2025-11-20T02:50:11.322+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-20T02:50:11.324+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:50:11.326+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:50:11.327+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 5ms
+2025-11-20T02:50:11.329+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-20T02:50:11.341+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-20T02:50:11.343+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 13ms
+2025-11-20T02:50:11.345+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-20T02:50:11.358+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-20T02:50:11.358+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 12ms
+2025-11-20T02:50:11.360+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-20T02:50:11.368+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-20T02:50:11.369+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 8ms
+2025-11-20T02:50:11.377+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : UPDATE SUMMARY
+2025-11-20T02:50:11.377+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Run:                         13
+2025-11-20T02:50:11.377+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Previously run:               0
+2025-11-20T02:50:11.378+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Filtered out:                 0
+2025-11-20T02:50:11.378+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : -------------------------------
+2025-11-20T02:50:11.378+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Total change sets:           13
+2025-11-20T02:50:11.379+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Update summary generated
+2025-11-20T02:50:11.386+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Update command completed successfully.
+2025-11-20T02:50:11.386+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-20T02:50:11.388+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2025-11-20T02:50:11.390+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Command execution complete
+2025-11-20T02:50:11.497+01:00  INFO 8048 --- [livraigo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T02:50:11.588+01:00  INFO 8048 --- [livraigo] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-20T02:50:11.671+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T02:50:12.131+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T02:50:12.208+01:00  WARN 8048 --- [livraigo] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T02:50:13.353+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T02:50:13.405+01:00  INFO 8048 --- [livraigo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:50:13.675+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-20T02:50:14.268+01:00  WARN 8048 --- [livraigo] [restartedMain] c.l.service.optimizer.AiOptimizer        : AiOptimizer initialized without dependencies - using fallback optimization
+2025-11-20T02:50:14.663+01:00  WARN 8048 --- [livraigo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T02:50:14.692+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-20T02:50:15.028+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T02:50:15.077+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/livraigo'
+2025-11-20T02:50:15.086+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Started LivraigoApplication in 7.667 seconds (process running for 8.151)
+2025-11-20T02:50:30.104+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-20T02:50:30.104+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-20T02:50:30.107+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-20T02:50:30.443+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.l.controller.DeliveryController        : POST /api/deliveries
+2025-11-20T02:50:30.471+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.l.service.impl.DeliveryServiceImpl     : === START: Saving new delivery ===
+2025-11-20T02:50:30.472+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.l.service.impl.DeliveryServiceImpl     : CustomerId from DTO: 1
+2025-11-20T02:50:30.590+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.latitude,
+        c1_0.longitude,
+        c1_0.name,
+        c1_0.preferred_time_slot 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2025-11-20T02:50:30.677+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.l.service.impl.DeliveryServiceImpl     : Found customer: Client Paris Centre (ID: 1)
+2025-11-20T02:50:30.677+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.l.service.impl.DeliveryServiceImpl     : Delivery customer ID before save: 1
+2025-11-20T02:50:30.737+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        deliveries
+        (address, customer_id, latitude, longitude, delivery_order, preferred_time_end, preferred_time_start, status, tour_id, volume, weight, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-11-20T02:50:30.774+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.l.service.impl.DeliveryServiceImpl     : === SUCCESS: Delivery saved with ID: 1 ===
+2025-11-20T02:50:43.334+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-4] c.l.controller.DeliveryController        : POST /api/deliveries
+2025-11-20T02:50:43.335+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-4] c.l.service.impl.DeliveryServiceImpl     : === START: Saving new delivery ===
+2025-11-20T02:50:43.335+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-4] c.l.service.impl.DeliveryServiceImpl     : CustomerId from DTO: 1
+2025-11-20T02:50:43.336+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.latitude,
+        c1_0.longitude,
+        c1_0.name,
+        c1_0.preferred_time_slot 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2025-11-20T02:50:43.338+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-4] c.l.service.impl.DeliveryServiceImpl     : Found customer: Client Paris Centre (ID: 1)
+2025-11-20T02:50:43.338+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-4] c.l.service.impl.DeliveryServiceImpl     : Delivery customer ID before save: 1
+2025-11-20T02:50:43.342+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        deliveries
+        (address, customer_id, latitude, longitude, delivery_order, preferred_time_end, preferred_time_start, status, tour_id, volume, weight, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-11-20T02:50:43.345+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-4] c.l.service.impl.DeliveryServiceImpl     : === SUCCESS: Delivery saved with ID: 2 ===
+2025-11-20T02:50:48.769+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] com.livraigo.controller.TourController   : POST /api/tours
+2025-11-20T02:50:48.769+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] c.livraigo.service.impl.TourServiceImpl  : Saving new tour
+2025-11-20T02:50:48.773+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        v1_0.id,
+        v1_0.available,
+        v1_0.license_plate,
+        v1_0.max_deliveries,
+        v1_0.max_volume,
+        v1_0.max_weight,
+        v1_0.type 
+    from
+        vehicles v1_0 
+    where
+        v1_0.id=?
+2025-11-20T02:50:48.782+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        w1_0.id,
+        w1_0.address,
+        w1_0.closing_time,
+        w1_0.latitude,
+        w1_0.longitude,
+        w1_0.name,
+        w1_0.opening_time 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2025-11-20T02:50:48.794+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.tour_id,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.id=?
+2025-11-20T02:50:48.842+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.tour_id,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.id=?
+2025-11-20T02:50:48.851+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] c.livraigo.service.util.TourValidator    : Validating tour constraints for vehicle: 1
+2025-11-20T02:50:48.872+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] c.livraigo.service.util.TourValidator    : Tour constraints validated successfully
+2025-11-20T02:50:48.904+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] c.l.service.optimizer.AiOptimizer        : Using fallback optimization for 2 deliveries
+2025-11-20T02:50:48.910+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        tours
+        (algorithm, date, name, total_distance, vehicle_id, warehouse_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-11-20T02:50:48.961+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    update
+        deliveries 
+    set
+        address=?,
+        customer_id=?,
+        latitude=?,
+        longitude=?,
+        delivery_order=?,
+        preferred_time_end=?,
+        preferred_time_start=?,
+        status=?,
+        tour_id=?,
+        volume=?,
+        weight=? 
+    where
+        id=?
+2025-11-20T02:50:48.992+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    update
+        deliveries 
+    set
+        address=?,
+        customer_id=?,
+        latitude=?,
+        longitude=?,
+        delivery_order=?,
+        preferred_time_end=?,
+        preferred_time_start=?,
+        status=?,
+        tour_id=?,
+        volume=?,
+        weight=? 
+    where
+        id=?
+2025-11-20T02:51:08.503+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-5] com.livraigo.controller.TourController   : POST /api/tours/1/optimize
+2025-11-20T02:51:08.507+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-5] c.livraigo.service.impl.TourServiceImpl  : Optimizing tour with id: 1
+2025-11-20T02:51:08.508+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-5] c.livraigo.service.impl.TourServiceImpl  : Fetching tour with id: 1
+2025-11-20T02:51:08.512+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        t1_0.id,
+        t1_0.algorithm,
+        t1_0.date,
+        t1_0.name,
+        t1_0.total_distance,
+        t1_0.vehicle_id,
+        t1_0.warehouse_id 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-11-20T02:51:08.543+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        d1_0.tour_id,
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.tour_id=? 
+    order by
+        d1_0.delivery_order
+2025-11-20T02:51:08.576+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-5] c.l.service.optimizer.AiOptimizer        : Using fallback optimization for 2 deliveries
+2025-11-20T02:51:08.594+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        v1_0.id,
+        v1_0.available,
+        v1_0.license_plate,
+        v1_0.max_deliveries,
+        v1_0.max_volume,
+        v1_0.max_weight,
+        v1_0.type 
+    from
+        vehicles v1_0 
+    where
+        v1_0.id=?
+2025-11-20T02:51:08.624+01:00 ERROR 8048 --- [livraigo] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/livraigo] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]] with root cause
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.livraigo.model.entity.Tour["vehicle"]->com.livraigo.model.entity.Vehicle$HibernateProxy$OR82h04A["hibernateLazyInitializer"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1330) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:414) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:53) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:30) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:341) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1574) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061) ~[jackson-databind-2.17.2.jar:2.17.2]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:483) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:114) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:297) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:245) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
