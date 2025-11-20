@@ -8,7 +8,7 @@ import com.livraigo.repository.DeliveryHistoryRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,7 +16,6 @@ import java.util.Map;
 import java.util.HashMap;
 
 @Component
-@ConditionalOnProperty(name = "app.optimization.algorithm", havingValue = "AI_OPTIMIZER")
 public class AiOptimizer implements TourOptimizer {
     
     private static final Logger logger = LoggerFactory.getLogger(AiOptimizer.class);
@@ -24,17 +23,38 @@ public class AiOptimizer implements TourOptimizer {
     private final ChatClient chatClient;
     private final DeliveryHistoryRepository deliveryHistoryRepository;
     
+    // Rendez les dépendances optionnelles
+    @Autowired(required = false)
     public AiOptimizer(ChatClient chatClient, DeliveryHistoryRepository deliveryHistoryRepository) {
         this.chatClient = chatClient;
         this.deliveryHistoryRepository = deliveryHistoryRepository;
+        
+        if (chatClient == null) {
+            logger.warn("ChatClient not available - AiOptimizer will use fallback optimization");
+        } else {
+            logger.info("AiOptimizer initialized with ChatClient");
+        }
+    }
+    
+    // Constructeur par défaut sans dépendances
+    public AiOptimizer() {
+        this.chatClient = null;
+        this.deliveryHistoryRepository = null;
+        logger.warn("AiOptimizer initialized without dependencies - using fallback optimization");
     }
     
     @Override
     public List<Delivery> calculateOptimalTour(List<Delivery> deliveries, Warehouse warehouse, Vehicle vehicle) {
+        // Si ChatClient n'est pas disponible, utilisez une méthode de repli
+        if (chatClient == null) {
+            return fallbackOptimization(deliveries, warehouse, vehicle);
+        }
+        
         try {
             logger.info("Starting AI optimization for {} deliveries", deliveries.size());
             
-            List<Object[]> historicalData = deliveryHistoryRepository.findAverageDelaysByCustomer();
+            List<Object[]> historicalData = deliveryHistoryRepository != null ? 
+                deliveryHistoryRepository.findAverageDelaysByCustomer() : List.of();
             
             String prompt = buildOptimizationPrompt(deliveries, warehouse, vehicle, historicalData);
             
@@ -48,9 +68,16 @@ public class AiOptimizer implements TourOptimizer {
             return parseAIResponse(aiResponse, deliveries);
             
         } catch (Exception e) {
-            logger.error("Error during AI optimization, using default order", e);
-            return deliveries;
+            logger.error("Error during AI optimization, using fallback order", e);
+            return fallbackOptimization(deliveries, warehouse, vehicle);
         }
+    }
+    
+    private List<Delivery> fallbackOptimization(List<Delivery> deliveries, Warehouse warehouse, Vehicle vehicle) {
+        logger.info("Using fallback optimization for {} deliveries", deliveries.size());
+        // Logique de repli simple - retourne l'ordre original
+        // Vous pourriez implémenter une logique simple basée sur la distance
+        return deliveries;
     }
     
     private String buildOptimizationPrompt(List<Delivery> deliveries, Warehouse warehouse, 
@@ -94,6 +121,8 @@ public class AiOptimizer implements TourOptimizer {
     
     private List<Delivery> parseAIResponse(String aiResponse, List<Delivery> originalDeliveries) {
         logger.info("AI response received: {}", aiResponse);
+        // Pour l'instant, retourne l'ordre original
+        // Implémentez la logique de parsing de la réponse AI ici
         return originalDeliveries;
     }
     
