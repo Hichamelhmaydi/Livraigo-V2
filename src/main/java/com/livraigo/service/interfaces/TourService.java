@@ -10,11 +10,11 @@ import java.util.List;
 public interface TourService {
     
     List<Tour> findAll();
-    Tour findById(Long id);
-    TourResponseDTO save(TourRequestDTO tourDTO); 
-    Tour update(Long id, TourRequestDTO tourDTO);
+    TourResponseDTO findById(Long id); // Change to DTO
+    TourResponseDTO save(TourRequestDTO tourDTO);
+    TourResponseDTO update(Long id, TourRequestDTO tourDTO); // Change to DTO
     void deleteById(Long id);
     List<Delivery> getOptimizedTour(Long tourId);
     Double getTotalDistance(Long tourId);
-    Tour optimizeTour(Long tourId);
+    TourResponseDTO optimizeTour(Long tourId); // Change to DTO
 }

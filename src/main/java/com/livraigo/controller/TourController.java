@@ -36,9 +36,9 @@ public class TourController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Tour> getTourById(@PathVariable Long id) {
+    public ResponseEntity<TourResponseDTO> getTourById(@PathVariable Long id) {
         logger.info("GET /api/tours/{}", id);
-        Tour tour = tourService.findById(id);
+        TourResponseDTO tour = tourService.findById(id); // Now returns DTO
         return ResponseEntity.ok(tour);
     }
 
@@ -46,7 +46,7 @@ public class TourController {
     public ResponseEntity<?> createTour(@Valid @RequestBody TourRequestDTO tourDTO) {
         logger.info("POST /api/tours");
         try {
-            TourResponseDTO tourResponse = tourService.save(tourDTO); // Maintenant retourne un DTO
+            TourResponseDTO tourResponse = tourService.save(tourDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(tourResponse);
         } catch (IllegalArgumentException e) {
             logger.error("Invalid algorithm in tour creation: {}", e.getMessage());
@@ -65,7 +65,7 @@ public class TourController {
     public ResponseEntity<?> updateTour(@PathVariable Long id, @Valid @RequestBody TourRequestDTO tourDTO) {
         logger.info("PUT /api/tours/{}", id);
         try {
-            Tour tour = tourService.update(id, tourDTO);
+            TourResponseDTO tour = tourService.update(id, tourDTO); // Now returns DTO
             return ResponseEntity.ok(tour);
         } catch (IllegalArgumentException e) {
             logger.error("Invalid algorithm in tour update: {}", e.getMessage());
@@ -102,9 +102,9 @@ public class TourController {
     }
 
     @PostMapping("/{id}/optimize")
-    public ResponseEntity<Tour> optimizeTour(@PathVariable Long id) {
+    public ResponseEntity<TourResponseDTO> optimizeTour(@PathVariable Long id) {
         logger.info("POST /api/tours/{}/optimize", id);
-        Tour optimizedTour = tourService.optimizeTour(id);
+        TourResponseDTO optimizedTour = tourService.optimizeTour(id); // Now returns DTO
         return ResponseEntity.ok(optimizedTour);
     }
 

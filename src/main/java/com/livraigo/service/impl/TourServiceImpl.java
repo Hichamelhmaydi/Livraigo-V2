@@ -70,10 +70,11 @@ public class TourServiceImpl implements TourService {
     }
     
     @Override
-    public Tour findById(Long id) {
+    public TourResponseDTO findById(Long id) {
         logger.info("Fetching tour with id: {}", id);
         Optional<Tour> tour = tourRepository.findById(id);
-        return tour.orElseThrow(() -> new RuntimeException("Tour not found with id: " + id));
+        return tour.map(tourMapper::toResponseDTO)
+                  .orElseThrow(() -> new RuntimeException("Tour not found with id: " + id));
     }
     
     @Override
@@ -101,11 +102,11 @@ public class TourServiceImpl implements TourService {
         tour = optimizeTour(tour);
 
         Tour savedTour = tourRepository.save(tour);
-        return tourMapper.toResponseDTO(savedTour); // Retourne le DTO, pas l'entité
+        return tourMapper.toResponseDTO(savedTour);
     }
 
     @Override
-    public Tour update(Long id, TourRequestDTO tourDTO) {
+    public TourResponseDTO update(Long id, TourRequestDTO tourDTO) {
         logger.info("Updating tour with id: {}", id);
         if (!tourRepository.existsById(id)) {
             throw new RuntimeException("Tour not found with id: " + id);
@@ -113,7 +114,8 @@ public class TourServiceImpl implements TourService {
         
         Tour tour = tourMapper.toEntity(tourDTO);
         tour.setId(id);
-        return tourRepository.save(tour);
+        Tour updatedTour = tourRepository.save(tour);
+        return tourMapper.toResponseDTO(updatedTour); // Return DTO
     }
     
     @Override
@@ -129,22 +131,29 @@ public class TourServiceImpl implements TourService {
     @Override
     public List<Delivery> getOptimizedTour(Long tourId) {
         logger.info("Getting optimized tour for tour id: {}", tourId);
-        Tour tour = findById(tourId);
+        Tour tour = findEntityById(tourId);
         return tour.getDeliveries();
     }
     
     @Override
     public Double getTotalDistance(Long tourId) {
         logger.info("Calculating total distance for tour id: {}", tourId);
-        Tour tour = findById(tourId);
+        Tour tour = findEntityById(tourId);
         return tour.getTotalDistance();
     }
     
     @Override
-    public Tour optimizeTour(Long tourId) {
+    public TourResponseDTO optimizeTour(Long tourId) {
         logger.info("Optimizing tour with id: {}", tourId);
-        Tour tour = findById(tourId);
-        return optimizeTour(tour);
+        Tour tour = findEntityById(tourId);
+        Tour optimizedTour = optimizeTour(tour);
+        return tourMapper.toResponseDTO(optimizedTour); // Return DTO
+    }
+    
+    // Méthode privée pour récupérer l'entité (utilisée en interne seulement)
+    private Tour findEntityById(Long id) {
+        Optional<Tour> tour = tourRepository.findById(id);
+        return tour.orElseThrow(() -> new RuntimeException("Tour not found with id: " + id));
     }
     
     private Tour optimizeTour(Tour tour) {

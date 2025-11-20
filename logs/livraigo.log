@@ -11557,3 +11557,826 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
+2025-11-20T02:55:30.246+01:00  INFO 8048 --- [livraigo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+2025-11-20T02:55:30.776+01:00  INFO 8048 --- [livraigo] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:55:30.892+01:00  WARN 8048 --- [livraigo] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2025-11-20T02:55:30.895+01:00  INFO 8048 --- [livraigo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-20T02:55:30.925+01:00  INFO 8048 --- [livraigo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-20T02:55:31.599+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:55:31.601+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:55:31.603+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
+2025-11-20T02:55:34.094+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T02:55:34.444+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 340 ms. Found 6 JPA repository interfaces.
+2025-11-20T02:55:36.105+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T02:55:36.138+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T02:55:36.142+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-20T02:55:36.335+01:00  INFO 8048 --- [livraigo] [restartedMain] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring embedded WebApplicationContext
+2025-11-20T02:55:36.336+01:00  INFO 8048 --- [livraigo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4726 ms
+2025-11-20T02:55:36.424+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-20T02:55:36.440+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:livraigodb user=SA
+2025-11-20T02:55:36.441+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-20T02:55:36.444+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:livraigodb'
+2025-11-20T02:55:36.559+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-20T02:55:37.039+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-20T02:55:37.082+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:55:37.251+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-20T02:55:37.255+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Using deploymentId: 3603737254
+2025-11-20T02:55:37.256+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:55:37.301+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-20T02:55:37.306+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table vehicles created
+2025-11-20T02:55:37.309+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 7ms
+2025-11-20T02:55:37.322+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-20T02:55:37.330+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table warehouses created
+2025-11-20T02:55:37.331+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 8ms
+2025-11-20T02:55:37.335+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-20T02:55:37.349+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table tours created
+2025-11-20T02:55:37.350+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 14ms
+2025-11-20T02:55:37.357+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-20T02:55:37.382+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table deliveries created
+2025-11-20T02:55:37.383+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 19ms
+2025-11-20T02:55:37.404+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-20T02:55:37.414+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into warehouses
+2025-11-20T02:55:37.418+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:55:37.421+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:55:37.422+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 16ms
+2025-11-20T02:55:37.436+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-20T02:55:37.454+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table customers created
+2025-11-20T02:55:37.456+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 18ms
+2025-11-20T02:55:37.468+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-20T02:55:37.553+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-20T02:55:37.574+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 103ms
+2025-11-20T02:55:37.619+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-20T02:55:37.671+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table delivery_history created
+2025-11-20T02:55:37.671+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 31ms
+2025-11-20T02:55:37.684+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-20T02:55:37.703+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_customer_name created
+2025-11-20T02:55:37.707+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_date created
+2025-11-20T02:55:37.719+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_customer created
+2025-11-20T02:55:37.737+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 52ms
+2025-11-20T02:55:37.768+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-20T02:55:37.773+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:55:37.785+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:55:37.785+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 15ms
+2025-11-20T02:55:37.806+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-20T02:55:37.882+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-20T02:55:37.884+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 60ms
+2025-11-20T02:55:37.887+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-20T02:55:37.941+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-20T02:55:37.952+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 63ms
+2025-11-20T02:55:37.958+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-20T02:55:38.119+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-20T02:55:38.123+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 157ms
+2025-11-20T02:55:38.206+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : UPDATE SUMMARY
+2025-11-20T02:55:38.206+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Run:                         13
+2025-11-20T02:55:38.207+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Previously run:               0
+2025-11-20T02:55:38.211+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Filtered out:                 0
+2025-11-20T02:55:38.211+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : -------------------------------
+2025-11-20T02:55:38.212+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Total change sets:           13
+2025-11-20T02:55:38.212+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Update summary generated
+2025-11-20T02:55:38.214+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Update command completed successfully.
+2025-11-20T02:55:38.215+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-20T02:55:38.218+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2025-11-20T02:55:38.222+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Command execution complete
+2025-11-20T02:55:38.452+01:00  INFO 8048 --- [livraigo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T02:55:38.480+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T02:55:38.586+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T02:55:38.595+01:00  WARN 8048 --- [livraigo] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T02:55:38.973+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T02:55:38.983+01:00  INFO 8048 --- [livraigo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:55:39.304+01:00  WARN 8048 --- [livraigo] [restartedMain] c.l.service.optimizer.AiOptimizer        : AiOptimizer initialized without dependencies - using fallback optimization
+2025-11-20T02:55:39.434+01:00  WARN 8048 --- [livraigo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T02:55:39.468+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-20T02:55:39.913+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T02:55:39.955+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/livraigo'
+2025-11-20T02:55:39.970+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Started LivraigoApplication in 8.614 seconds (process running for 333.035)
+2025-11-20T02:55:39.974+01:00  INFO 8048 --- [livraigo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-20T02:56:03.182+01:00  INFO 8048 --- [livraigo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-20T02:56:04.903+01:00  INFO 8048 --- [livraigo] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:56:05.002+01:00  WARN 8048 --- [livraigo] [Thread-7] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2025-11-20T02:56:05.025+01:00  INFO 8048 --- [livraigo] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-11-20T02:56:05.031+01:00  INFO 8048 --- [livraigo] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-11-20T02:56:06.211+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:56:06.213+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:56:06.223+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
+2025-11-20T02:56:08.824+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T02:56:08.924+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 6 JPA repository interfaces.
+2025-11-20T02:56:09.247+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T02:56:09.249+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T02:56:09.250+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-20T02:56:09.303+01:00  INFO 8048 --- [livraigo] [restartedMain] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring embedded WebApplicationContext
+2025-11-20T02:56:09.304+01:00  INFO 8048 --- [livraigo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3052 ms
+2025-11-20T02:56:09.355+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-11-20T02:56:09.359+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:livraigodb user=SA
+2025-11-20T02:56:09.360+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-11-20T02:56:09.360+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:livraigodb'
+2025-11-20T02:56:09.419+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-20T02:56:09.685+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-20T02:56:09.693+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:56:09.756+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-20T02:56:09.757+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Using deploymentId: 3603769756
+2025-11-20T02:56:09.760+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:56:09.791+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-20T02:56:09.800+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table vehicles created
+2025-11-20T02:56:09.806+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 14ms
+2025-11-20T02:56:09.814+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-20T02:56:09.820+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table warehouses created
+2025-11-20T02:56:09.822+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 6ms
+2025-11-20T02:56:09.827+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-20T02:56:09.846+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table tours created
+2025-11-20T02:56:09.851+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 19ms
+2025-11-20T02:56:09.855+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-20T02:56:09.865+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table deliveries created
+2025-11-20T02:56:09.867+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 12ms
+2025-11-20T02:56:09.886+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-20T02:56:09.888+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into warehouses
+2025-11-20T02:56:09.891+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:56:09.894+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:56:09.895+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 9ms
+2025-11-20T02:56:09.899+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-20T02:56:09.903+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table customers created
+2025-11-20T02:56:09.904+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 4ms
+2025-11-20T02:56:09.908+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-20T02:56:09.921+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-20T02:56:09.922+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 13ms
+2025-11-20T02:56:09.926+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-20T02:56:09.937+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table delivery_history created
+2025-11-20T02:56:09.938+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 11ms
+2025-11-20T02:56:09.942+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-20T02:56:09.944+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_customer_name created
+2025-11-20T02:56:09.947+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_date created
+2025-11-20T02:56:09.949+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_customer created
+2025-11-20T02:56:09.952+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 9ms
+2025-11-20T02:56:09.959+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-20T02:56:09.962+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:56:09.965+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:56:09.965+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 6ms
+2025-11-20T02:56:09.970+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-20T02:56:09.976+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-20T02:56:09.977+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 6ms
+2025-11-20T02:56:09.984+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-20T02:56:09.991+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-20T02:56:09.991+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 6ms
+2025-11-20T02:56:09.995+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-20T02:56:10.001+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-20T02:56:10.001+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 5ms
+2025-11-20T02:56:10.006+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : UPDATE SUMMARY
+2025-11-20T02:56:10.006+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Run:                         13
+2025-11-20T02:56:10.006+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Previously run:               0
+2025-11-20T02:56:10.007+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Filtered out:                 0
+2025-11-20T02:56:10.007+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : -------------------------------
+2025-11-20T02:56:10.007+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Total change sets:           13
+2025-11-20T02:56:10.007+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Update summary generated
+2025-11-20T02:56:10.008+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Update command completed successfully.
+2025-11-20T02:56:10.008+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-20T02:56:10.008+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2025-11-20T02:56:10.009+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Command execution complete
+2025-11-20T02:56:10.065+01:00  INFO 8048 --- [livraigo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T02:56:10.071+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T02:56:10.094+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T02:56:10.098+01:00  WARN 8048 --- [livraigo] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T02:56:10.408+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T02:56:10.411+01:00  INFO 8048 --- [livraigo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:56:11.148+01:00  WARN 8048 --- [livraigo] [restartedMain] c.l.service.optimizer.AiOptimizer        : AiOptimizer initialized without dependencies - using fallback optimization
+2025-11-20T02:56:11.277+01:00  WARN 8048 --- [livraigo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T02:56:11.298+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-20T02:56:11.454+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T02:56:11.474+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/livraigo'
+2025-11-20T02:56:11.484+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Started LivraigoApplication in 5.477 seconds (process running for 364.55)
+2025-11-20T02:56:11.488+01:00  INFO 8048 --- [livraigo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-20T02:56:24.649+01:00  INFO 8048 --- [livraigo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-11-20T02:56:25.300+01:00  INFO 8048 --- [livraigo] [Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:56:25.302+01:00  WARN 8048 --- [livraigo] [Thread-12] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2025-11-20T02:56:25.304+01:00  INFO 8048 --- [livraigo] [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-11-20T02:56:25.305+01:00  INFO 8048 --- [livraigo] [Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-11-20T02:56:25.461+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:56:25.462+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:56:25.462+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
+2025-11-20T02:56:25.780+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T02:56:25.816+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 6 JPA repository interfaces.
+2025-11-20T02:56:25.907+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T02:56:25.909+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T02:56:25.909+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-20T02:56:25.933+01:00  INFO 8048 --- [livraigo] [restartedMain] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring embedded WebApplicationContext
+2025-11-20T02:56:25.934+01:00  INFO 8048 --- [livraigo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 467 ms
+2025-11-20T02:56:25.953+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-11-20T02:56:25.954+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:livraigodb user=SA
+2025-11-20T02:56:25.955+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-11-20T02:56:25.955+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:livraigodb'
+2025-11-20T02:56:25.972+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-20T02:56:26.056+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-20T02:56:26.059+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:56:26.079+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-20T02:56:26.079+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Using deploymentId: 3603786079
+2025-11-20T02:56:26.080+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:56:26.087+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-20T02:56:26.089+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table vehicles created
+2025-11-20T02:56:26.090+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 2ms
+2025-11-20T02:56:26.092+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-20T02:56:26.094+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table warehouses created
+2025-11-20T02:56:26.094+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 2ms
+2025-11-20T02:56:26.096+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-20T02:56:26.101+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table tours created
+2025-11-20T02:56:26.101+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 5ms
+2025-11-20T02:56:26.103+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-20T02:56:26.105+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table deliveries created
+2025-11-20T02:56:26.105+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 2ms
+2025-11-20T02:56:26.107+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-20T02:56:26.108+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into warehouses
+2025-11-20T02:56:26.109+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:56:26.110+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:56:26.110+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 3ms
+2025-11-20T02:56:26.112+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-20T02:56:26.115+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table customers created
+2025-11-20T02:56:26.116+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 4ms
+2025-11-20T02:56:26.119+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-20T02:56:26.124+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-20T02:56:26.125+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 6ms
+2025-11-20T02:56:26.128+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-20T02:56:26.136+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table delivery_history created
+2025-11-20T02:56:26.137+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 8ms
+2025-11-20T02:56:26.148+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-20T02:56:26.155+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_customer_name created
+2025-11-20T02:56:26.159+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_date created
+2025-11-20T02:56:26.161+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_customer created
+2025-11-20T02:56:26.162+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 11ms
+2025-11-20T02:56:26.171+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-20T02:56:26.178+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:56:26.192+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:56:26.193+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 20ms
+2025-11-20T02:56:26.199+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-20T02:56:26.207+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-20T02:56:26.212+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 10ms
+2025-11-20T02:56:26.228+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-20T02:56:26.264+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-20T02:56:26.265+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 32ms
+2025-11-20T02:56:26.272+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-20T02:56:26.295+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-20T02:56:26.296+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 20ms
+2025-11-20T02:56:26.302+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : UPDATE SUMMARY
+2025-11-20T02:56:26.303+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Run:                         13
+2025-11-20T02:56:26.303+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Previously run:               0
+2025-11-20T02:56:26.303+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Filtered out:                 0
+2025-11-20T02:56:26.306+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : -------------------------------
+2025-11-20T02:56:26.308+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Total change sets:           13
+2025-11-20T02:56:26.311+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Update summary generated
+2025-11-20T02:56:26.318+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Update command completed successfully.
+2025-11-20T02:56:26.321+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-20T02:56:26.324+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2025-11-20T02:56:26.327+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Command execution complete
+2025-11-20T02:56:26.557+01:00  INFO 8048 --- [livraigo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T02:56:26.574+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T02:56:26.616+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T02:56:26.620+01:00  WARN 8048 --- [livraigo] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T02:56:26.964+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T02:56:26.974+01:00  INFO 8048 --- [livraigo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:56:27.363+01:00  WARN 8048 --- [livraigo] [restartedMain] c.l.service.optimizer.AiOptimizer        : AiOptimizer initialized without dependencies - using fallback optimization
+2025-11-20T02:56:27.491+01:00  WARN 8048 --- [livraigo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T02:56:27.517+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-20T02:56:27.827+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T02:56:27.854+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/livraigo'
+2025-11-20T02:56:27.862+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Started LivraigoApplication in 2.468 seconds (process running for 380.927)
+2025-11-20T02:56:27.865+01:00  INFO 8048 --- [livraigo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-20T02:56:35.455+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-20T02:56:35.456+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-20T02:56:35.460+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-11-20T02:56:35.464+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] com.livraigo.controller.TourController   : POST /api/tours/1/optimize
+2025-11-20T02:56:35.464+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-2] c.livraigo.service.impl.TourServiceImpl  : Optimizing tour with id: 1
+2025-11-20T02:56:35.469+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        t1_0.id,
+        t1_0.algorithm,
+        t1_0.date,
+        t1_0.name,
+        t1_0.total_distance,
+        t1_0.vehicle_id,
+        t1_0.warehouse_id 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-11-20T02:56:35.482+01:00 ERROR 8048 --- [livraigo] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/livraigo] threw exception [Request processing failed: java.lang.RuntimeException: Tour not found with id: 1] with root cause
+
+java.lang.RuntimeException: Tour not found with id: 1
+	at com.livraigo.service.impl.TourServiceImpl.lambda$6(TourServiceImpl.java:156) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.livraigo.service.impl.TourServiceImpl.findEntityById(TourServiceImpl.java:156) ~[classes/:na]
+	at com.livraigo.service.impl.TourServiceImpl.optimizeTour(TourServiceImpl.java:148) ~[classes/:na]
+	at com.livraigo.controller.TourController.optimizeTour(TourController.java:107) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.13.jar:6.1.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.30.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.13.jar:6.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-11-20T02:56:47.753+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] com.livraigo.controller.TourController   : POST /api/tours
+2025-11-20T02:56:47.754+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-3] c.livraigo.service.impl.TourServiceImpl  : Saving new tour
+2025-11-20T02:56:47.757+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        v1_0.id,
+        v1_0.available,
+        v1_0.license_plate,
+        v1_0.max_deliveries,
+        v1_0.max_volume,
+        v1_0.max_weight,
+        v1_0.type 
+    from
+        vehicles v1_0 
+    where
+        v1_0.id=?
+2025-11-20T02:56:47.769+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        w1_0.id,
+        w1_0.address,
+        w1_0.closing_time,
+        w1_0.latitude,
+        w1_0.longitude,
+        w1_0.name,
+        w1_0.opening_time 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2025-11-20T02:56:47.786+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.tour_id,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.id=?
+2025-11-20T02:56:47.788+01:00 ERROR 8048 --- [livraigo] [http-nio-8080-exec-3] com.livraigo.controller.TourController   : Error creating tour: Delivery not found with id: 1
+2025-11-20T02:56:56.436+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-9] c.l.controller.DeliveryController        : POST /api/deliveries
+2025-11-20T02:56:56.439+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-9] c.l.service.impl.DeliveryServiceImpl     : === START: Saving new delivery ===
+2025-11-20T02:56:56.440+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-9] c.l.service.impl.DeliveryServiceImpl     : CustomerId from DTO: 1
+2025-11-20T02:56:56.442+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.latitude,
+        c1_0.longitude,
+        c1_0.name,
+        c1_0.preferred_time_slot 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2025-11-20T02:56:56.447+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-9] c.l.service.impl.DeliveryServiceImpl     : Found customer: Client Paris Centre (ID: 1)
+2025-11-20T02:56:56.447+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-9] c.l.service.impl.DeliveryServiceImpl     : Delivery customer ID before save: 1
+2025-11-20T02:56:56.456+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        deliveries
+        (address, customer_id, latitude, longitude, delivery_order, preferred_time_end, preferred_time_start, status, tour_id, volume, weight, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-11-20T02:56:56.460+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-9] c.l.service.impl.DeliveryServiceImpl     : === SUCCESS: Delivery saved with ID: 1 ===
+2025-11-20T02:57:02.148+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-7] c.l.controller.DeliveryController        : POST /api/deliveries
+2025-11-20T02:57:02.152+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-7] c.l.service.impl.DeliveryServiceImpl     : === START: Saving new delivery ===
+2025-11-20T02:57:02.154+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-7] c.l.service.impl.DeliveryServiceImpl     : CustomerId from DTO: 1
+2025-11-20T02:57:02.155+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.latitude,
+        c1_0.longitude,
+        c1_0.name,
+        c1_0.preferred_time_slot 
+    from
+        customers c1_0 
+    where
+        c1_0.id=?
+2025-11-20T02:57:02.157+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-7] c.l.service.impl.DeliveryServiceImpl     : Found customer: Client Paris Centre (ID: 1)
+2025-11-20T02:57:02.157+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-7] c.l.service.impl.DeliveryServiceImpl     : Delivery customer ID before save: 1
+2025-11-20T02:57:02.159+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        deliveries
+        (address, customer_id, latitude, longitude, delivery_order, preferred_time_end, preferred_time_start, status, tour_id, volume, weight, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-11-20T02:57:02.161+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-7] c.l.service.impl.DeliveryServiceImpl     : === SUCCESS: Delivery saved with ID: 2 ===
+2025-11-20T02:57:06.043+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-8] com.livraigo.controller.TourController   : POST /api/tours
+2025-11-20T02:57:06.043+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-8] c.livraigo.service.impl.TourServiceImpl  : Saving new tour
+2025-11-20T02:57:06.044+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        v1_0.id,
+        v1_0.available,
+        v1_0.license_plate,
+        v1_0.max_deliveries,
+        v1_0.max_volume,
+        v1_0.max_weight,
+        v1_0.type 
+    from
+        vehicles v1_0 
+    where
+        v1_0.id=?
+2025-11-20T02:57:06.049+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        w1_0.id,
+        w1_0.address,
+        w1_0.closing_time,
+        w1_0.latitude,
+        w1_0.longitude,
+        w1_0.name,
+        w1_0.opening_time 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2025-11-20T02:57:06.055+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.tour_id,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.id=?
+2025-11-20T02:57:06.063+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.tour_id,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.id=?
+2025-11-20T02:57:06.067+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-8] c.livraigo.service.util.TourValidator    : Validating tour constraints for vehicle: 1
+2025-11-20T02:57:06.073+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-8] c.livraigo.service.util.TourValidator    : Tour constraints validated successfully
+2025-11-20T02:57:06.077+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-8] c.l.service.optimizer.AiOptimizer        : Using fallback optimization for 2 deliveries
+2025-11-20T02:57:06.082+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        tours
+        (algorithm, date, name, total_distance, vehicle_id, warehouse_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-11-20T02:57:06.088+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    update
+        deliveries 
+    set
+        address=?,
+        customer_id=?,
+        latitude=?,
+        longitude=?,
+        delivery_order=?,
+        preferred_time_end=?,
+        preferred_time_start=?,
+        status=?,
+        tour_id=?,
+        volume=?,
+        weight=? 
+    where
+        id=?
+2025-11-20T02:57:06.090+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    update
+        deliveries 
+    set
+        address=?,
+        customer_id=?,
+        latitude=?,
+        longitude=?,
+        delivery_order=?,
+        preferred_time_end=?,
+        preferred_time_start=?,
+        status=?,
+        tour_id=?,
+        volume=?,
+        weight=? 
+    where
+        id=?
+2025-11-20T02:57:10.036+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-10] com.livraigo.controller.TourController   : POST /api/tours/1/optimize
+2025-11-20T02:57:10.036+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-10] c.livraigo.service.impl.TourServiceImpl  : Optimizing tour with id: 1
+2025-11-20T02:57:10.037+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        t1_0.id,
+        t1_0.algorithm,
+        t1_0.date,
+        t1_0.name,
+        t1_0.total_distance,
+        t1_0.vehicle_id,
+        t1_0.warehouse_id 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-11-20T02:57:10.047+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        d1_0.tour_id,
+        d1_0.id,
+        d1_0.address,
+        d1_0.customer_id,
+        d1_0.latitude,
+        d1_0.longitude,
+        d1_0.delivery_order,
+        d1_0.preferred_time_end,
+        d1_0.preferred_time_start,
+        d1_0.status,
+        d1_0.volume,
+        d1_0.weight 
+    from
+        deliveries d1_0 
+    where
+        d1_0.tour_id=? 
+    order by
+        d1_0.delivery_order
+2025-11-20T02:57:10.052+01:00  INFO 8048 --- [livraigo] [http-nio-8080-exec-10] c.l.service.optimizer.AiOptimizer        : Using fallback optimization for 2 deliveries
+2025-11-20T02:57:10.053+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        v1_0.id,
+        v1_0.available,
+        v1_0.license_plate,
+        v1_0.max_deliveries,
+        v1_0.max_volume,
+        v1_0.max_weight,
+        v1_0.type 
+    from
+        vehicles v1_0 
+    where
+        v1_0.id=?
+2025-11-20T02:57:10.058+01:00 DEBUG 8048 --- [livraigo] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        w1_0.id,
+        w1_0.address,
+        w1_0.closing_time,
+        w1_0.latitude,
+        w1_0.longitude,
+        w1_0.name,
+        w1_0.opening_time 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2025-11-20T02:58:14.887+01:00  INFO 8048 --- [livraigo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 5 deletions, 0 modifications)
+2025-11-20T02:58:15.266+01:00  INFO 8048 --- [livraigo] [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:58:15.325+01:00  WARN 8048 --- [livraigo] [Thread-16] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2025-11-20T02:58:15.327+01:00  INFO 8048 --- [livraigo] [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-11-20T02:58:15.333+01:00  INFO 8048 --- [livraigo] [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-11-20T02:58:16.294+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:58:16.294+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:58:16.294+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
+2025-11-20T02:58:16.964+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T02:58:17.050+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 6 JPA repository interfaces.
+2025-11-20T02:58:17.586+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T02:58:17.588+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T02:58:17.588+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-20T02:58:17.617+01:00  INFO 8048 --- [livraigo] [restartedMain] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring embedded WebApplicationContext
+2025-11-20T02:58:17.617+01:00  INFO 8048 --- [livraigo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1320 ms
+2025-11-20T02:58:17.644+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-11-20T02:58:17.647+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:livraigodb user=SA
+2025-11-20T02:58:17.647+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-11-20T02:58:17.648+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:livraigodb'
+2025-11-20T02:58:17.665+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-20T02:58:17.784+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-20T02:58:17.787+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:58:17.818+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-20T02:58:17.820+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Using deploymentId: 3603897818
+2025-11-20T02:58:17.821+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:58:17.831+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-20T02:58:17.834+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table vehicles created
+2025-11-20T02:58:17.834+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 2ms
+2025-11-20T02:58:17.836+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-20T02:58:17.838+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table warehouses created
+2025-11-20T02:58:17.839+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 3ms
+2025-11-20T02:58:17.840+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-20T02:58:17.845+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table tours created
+2025-11-20T02:58:17.845+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 5ms
+2025-11-20T02:58:17.850+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-20T02:58:17.854+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table deliveries created
+2025-11-20T02:58:17.854+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 4ms
+2025-11-20T02:58:17.857+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-20T02:58:17.859+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into warehouses
+2025-11-20T02:58:17.863+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:58:17.864+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:58:17.865+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 7ms
+2025-11-20T02:58:17.867+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-20T02:58:17.870+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table customers created
+2025-11-20T02:58:17.870+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 2ms
+2025-11-20T02:58:17.872+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-20T02:58:17.879+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-20T02:58:17.879+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 7ms
+2025-11-20T02:58:17.881+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-20T02:58:17.884+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table delivery_history created
+2025-11-20T02:58:17.884+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 3ms
+2025-11-20T02:58:17.886+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-20T02:58:17.887+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_customer_name created
+2025-11-20T02:58:17.887+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_date created
+2025-11-20T02:58:17.888+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_customer created
+2025-11-20T02:58:17.888+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 2ms
+2025-11-20T02:58:17.890+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-20T02:58:17.891+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:58:17.892+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:58:17.893+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 3ms
+2025-11-20T02:58:17.895+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-20T02:58:17.898+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-20T02:58:17.898+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 3ms
+2025-11-20T02:58:17.900+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-20T02:58:17.905+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-20T02:58:17.905+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 4ms
+2025-11-20T02:58:17.906+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-20T02:58:17.908+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-20T02:58:17.908+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 2ms
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : UPDATE SUMMARY
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Run:                         13
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Previously run:               0
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Filtered out:                 0
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : -------------------------------
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Total change sets:           13
+2025-11-20T02:58:17.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Update summary generated
+2025-11-20T02:58:17.912+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Update command completed successfully.
+2025-11-20T02:58:17.912+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-20T02:58:17.913+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2025-11-20T02:58:17.913+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Command execution complete
+2025-11-20T02:58:17.948+01:00  INFO 8048 --- [livraigo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T02:58:17.952+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T02:58:17.961+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T02:58:17.963+01:00  WARN 8048 --- [livraigo] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T02:58:18.059+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T02:58:18.061+01:00  INFO 8048 --- [livraigo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:58:18.300+01:00  WARN 8048 --- [livraigo] [restartedMain] c.l.service.optimizer.AiOptimizer        : AiOptimizer initialized without dependencies - using fallback optimization
+2025-11-20T02:58:18.339+01:00  WARN 8048 --- [livraigo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T02:58:18.347+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-20T02:58:18.435+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T02:58:18.449+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/livraigo'
+2025-11-20T02:58:18.455+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Started LivraigoApplication in 2.223 seconds (process running for 491.52)
+2025-11-20T02:58:18.456+01:00  INFO 8048 --- [livraigo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-20T02:58:19.883+01:00  INFO 8048 --- [livraigo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+2025-11-20T02:58:20.682+01:00  INFO 8048 --- [livraigo] [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:58:20.685+01:00  WARN 8048 --- [livraigo] [Thread-20] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2025-11-20T02:58:20.686+01:00  INFO 8048 --- [livraigo] [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-11-20T02:58:20.688+01:00  INFO 8048 --- [livraigo] [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-11-20T02:58:20.889+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:58:20.898+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:58:20.899+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
+2025-11-20T02:58:21.466+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20T02:58:21.559+01:00  INFO 8048 --- [livraigo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 6 JPA repository interfaces.
+2025-11-20T02:58:22.002+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-20T02:58:22.036+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20T02:58:22.060+01:00  INFO 8048 --- [livraigo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-20T02:58:22.113+01:00  INFO 8048 --- [livraigo] [restartedMain] o.a.c.c.C.[.[localhost].[/livraigo]      : Initializing Spring embedded WebApplicationContext
+2025-11-20T02:58:22.130+01:00  INFO 8048 --- [livraigo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2025-11-20T02:58:22.187+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-11-20T02:58:22.200+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:livraigodb user=SA
+2025-11-20T02:58:22.210+01:00  INFO 8048 --- [livraigo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-11-20T02:58:22.212+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:livraigodb'
+2025-11-20T02:58:22.269+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.database                       : Set default schema name to PUBLIC
+2025-11-20T02:58:22.537+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2025-11-20T02:58:22.551+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:58:22.664+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully acquired change log lock
+2025-11-20T02:58:22.704+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Using deploymentId: 3603902703
+2025-11-20T02:58:22.732+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2025-11-20T02:58:22.805+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team
+2025-11-20T02:58:22.832+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table vehicles created
+2025-11-20T02:58:22.845+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-1::dev-team ran successfully in 19ms
+2025-11-20T02:58:22.877+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team
+2025-11-20T02:58:22.888+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table warehouses created
+2025-11-20T02:58:22.900+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-2::dev-team ran successfully in 16ms
+2025-11-20T02:58:22.911+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team
+2025-11-20T02:58:22.928+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table tours created
+2025-11-20T02:58:22.935+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-3::dev-team ran successfully in 20ms
+2025-11-20T02:58:22.953+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team
+2025-11-20T02:58:22.985+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table deliveries created
+2025-11-20T02:58:23.014+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-4::dev-team ran successfully in 53ms
+2025-11-20T02:58:23.030+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team
+2025-11-20T02:58:23.064+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into warehouses
+2025-11-20T02:58:23.086+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:58:23.136+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into vehicles
+2025-11-20T02:58:23.165+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/changelog-v1.0-initial.xml::v1.0-5::dev-team ran successfully in 102ms
+2025-11-20T02:58:23.177+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team
+2025-11-20T02:58:23.183+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table customers created
+2025-11-20T02:58:23.192+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-1::dev-team ran successfully in 14ms
+2025-11-20T02:58:23.201+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team
+2025-11-20T02:58:23.224+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns customer_id(BIGINT) added to deliveries
+2025-11-20T02:58:23.251+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-2::dev-team ran successfully in 40ms
+2025-11-20T02:58:23.262+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team
+2025-11-20T02:58:23.295+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Table delivery_history created
+2025-11-20T02:58:23.310+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-3::dev-team ran successfully in 47ms
+2025-11-20T02:58:23.316+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team
+2025-11-20T02:58:23.352+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_customer_name created
+2025-11-20T02:58:23.366+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_date created
+2025-11-20T02:58:23.416+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Index idx_history_customer created
+2025-11-20T02:58:23.455+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-4::dev-team ran successfully in 108ms
+2025-11-20T02:58:23.483+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team
+2025-11-20T02:58:23.502+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:58:23.515+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : New row inserted into customers
+2025-11-20T02:58:23.520+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-5::dev-team ran successfully in 25ms
+2025-11-20T02:58:23.532+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team
+2025-11-20T02:58:23.548+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns algorithm(VARCHAR(255)) added to tours
+2025-11-20T02:58:23.551+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-6-add-algorithm-column::dev-team ran successfully in 13ms
+2025-11-20T02:58:23.559+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team
+2025-11-20T02:58:23.568+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to tours
+2025-11-20T02:58:23.580+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-7-add-name-column::dev-team ran successfully in 20ms
+2025-11-20T02:58:23.583+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team
+2025-11-20T02:58:23.599+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : Columns name(VARCHAR(255)) added to warehouses
+2025-11-20T02:58:23.618+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-v2.0-new-entities.xml::v2.0-8-add-name-to-warehouses::dev-team ran successfully in 23ms
+2025-11-20T02:58:23.655+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : UPDATE SUMMARY
+2025-11-20T02:58:23.691+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Run:                         13
+2025-11-20T02:58:23.712+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Previously run:               0
+2025-11-20T02:58:23.798+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Filtered out:                 0
+2025-11-20T02:58:23.860+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : -------------------------------
+2025-11-20T02:58:23.882+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Total change sets:           13
+2025-11-20T02:58:23.961+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.util                           : Update summary generated
+2025-11-20T02:58:23.996+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Update command completed successfully.
+2025-11-20T02:58:24.001+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 18
+2025-11-20T02:58:24.056+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.lockservice                    : Successfully released change log lock
+2025-11-20T02:58:24.063+01:00  INFO 8048 --- [livraigo] [restartedMain] liquibase.command                        : Command execution complete
+2025-11-20T02:58:24.174+01:00  INFO 8048 --- [livraigo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20T02:58:24.190+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-20T02:58:24.265+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-20T02:58:24.328+01:00  WARN 8048 --- [livraigo] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-20T02:58:24.728+01:00  INFO 8048 --- [livraigo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-20T02:58:24.737+01:00  INFO 8048 --- [livraigo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:58:25.136+01:00  WARN 8048 --- [livraigo] [restartedMain] c.l.service.optimizer.AiOptimizer        : AiOptimizer initialized without dependencies - using fallback optimization
+2025-11-20T02:58:25.183+01:00  WARN 8048 --- [livraigo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20T02:58:25.194+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-11-20T02:58:25.528+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-20T02:58:25.588+01:00  INFO 8048 --- [livraigo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/livraigo'
+2025-11-20T02:58:25.609+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Started LivraigoApplication in 4.809 seconds (process running for 498.674)
+2025-11-20T02:58:25.612+01:00  INFO 8048 --- [livraigo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-20T02:58:43.564+01:00  INFO 8048 --- [livraigo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-11-20T02:58:43.794+01:00  INFO 8048 --- [livraigo] [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20T02:58:43.796+01:00  WARN 8048 --- [livraigo] [Thread-24] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2025-11-20T02:58:43.797+01:00  INFO 8048 --- [livraigo] [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-11-20T02:58:43.797+01:00  INFO 8048 --- [livraigo] [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-11-20T02:58:43.906+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Starting LivraigoApplication using Java 17.0.17 with PID 8048 (C:\Users\youco\Desktop\livraigo-V2\target\classes started by youco in C:\Users\youco\Desktop\livraigo-V2)
+2025-11-20T02:58:43.907+01:00 DEBUG 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-20T02:58:43.908+01:00  INFO 8048 --- [livraigo] [restartedMain] com.livraigo.LivraigoApplication         : The following 1 profile is active: "dev"
