@@ -1,6 +1,16 @@
 package com.livraigo.service.impl;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.stereotype.Service;
+
 import com.livraigo.dto.TourRequestDTO;
+import com.livraigo.dto.TourResponseDTO;
 import com.livraigo.mapper.TourMapper;
 import com.livraigo.model.entity.Delivery;
 import com.livraigo.model.entity.Tour;
@@ -18,15 +28,6 @@ import com.livraigo.service.optimizer.NearestNeighborOptimizer;
 import com.livraigo.service.optimizer.TourOptimizer;
 import com.livraigo.service.util.TourValidator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 @Service
 public class TourServiceImpl implements TourService {
     
@@ -38,7 +39,7 @@ public class TourServiceImpl implements TourService {
     private final WarehouseRepository warehouseRepository;
     private final NearestNeighborOptimizer nearestNeighborOptimizer;
     private final ClarkeWrightOptimizer clarkeWrightOptimizer;
-    private final AiOptimizer aiOptimizer; // Corrigez le nom (minuscule)
+    private final AiOptimizer aiOptimizer;
     private final TourValidator tourValidator;
     private final TourMapper tourMapper;
     
@@ -48,7 +49,7 @@ public class TourServiceImpl implements TourService {
                           WarehouseRepository warehouseRepository,
                           NearestNeighborOptimizer nearestNeighborOptimizer,
                           ClarkeWrightOptimizer clarkeWrightOptimizer,
-                          AiOptimizer aiOptimizer, // AJOUTEZ CE PARAMÈTRE
+                          AiOptimizer aiOptimizer,
                           TourValidator tourValidator,
                           TourMapper tourMapper) {
         this.tourRepository = tourRepository;
@@ -57,11 +58,9 @@ public class TourServiceImpl implements TourService {
         this.warehouseRepository = warehouseRepository;
         this.nearestNeighborOptimizer = nearestNeighborOptimizer;
         this.clarkeWrightOptimizer = clarkeWrightOptimizer;
-        this.aiOptimizer = aiOptimizer; // INITIALISEZ-LE
+        this.aiOptimizer = aiOptimizer;
         this.tourValidator = tourValidator;
         this.tourMapper = tourMapper;
-        
-        logger.info("TourServiceImpl initialized with AiOptimizer: {}", aiOptimizer != null);
     }
     
     @Override
@@ -78,7 +77,7 @@ public class TourServiceImpl implements TourService {
     }
     
     @Override
-    public Tour save(TourRequestDTO tourDTO) {
+    public TourResponseDTO save(TourRequestDTO tourDTO) {
         logger.info("Saving new tour");
 
         Vehicle vehicle = vehicleRepository.findById(tourDTO.getVehicleId())
@@ -101,7 +100,8 @@ public class TourServiceImpl implements TourService {
 
         tour = optimizeTour(tour);
 
-        return tourRepository.save(tour);
+        Tour savedTour = tourRepository.save(tour);
+        return tourMapper.toResponseDTO(savedTour); // Retourne le DTO, pas l'entité
     }
 
     @Override
@@ -175,10 +175,8 @@ public class TourServiceImpl implements TourService {
                 return clarkeWrightOptimizer;
             case AI_OPTIMIZER:
                 if (aiOptimizer == null) {
-                    logger.error("AiOptimizer is null! Check injection in constructor.");
-                    throw new IllegalArgumentException("AI Optimizer is not available. AiOptimizer bean is null.");
+                    throw new IllegalArgumentException("AI Optimizer is not available.");
                 }
-                logger.info("Using AiOptimizer");
                 return aiOptimizer;
             default:
                 throw new IllegalArgumentException("Unknown optimization algorithm: " + algorithm);

@@ -1,5 +1,6 @@
 package com.livraigo.model.entity;
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
